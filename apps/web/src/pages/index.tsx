@@ -1,20 +1,9 @@
-import styled from "styled-components"
-import { ColorThemeType, TitleFontSize, WeightFont } from "../core/constants/theme"
-
-interface TitleProps{
-  size: TitleFontSize,
-  color: ColorThemeType,
-  weight: WeightFont
-}
-
-const Title = styled.h1<TitleProps>`
-  color: ${({theme, color}) => theme.colors[color]};
-  font-size: ${({theme, size}) => theme.typography.title[size]};
-  font-weight: ${({theme, weight}) => theme.typography.weight[weight]};
-`
+import { Title, Navbar } from "components/recycle/"
 
 export default function Home() {
   return (
-    <Title color="primary_400" size="l" weight="regular">adsasdas</Title>
+    <Navbar>
+      <Title color="primary_500" size="l" weight="regular">adsasdas</Title>
+    </Navbar>
   )
 }
