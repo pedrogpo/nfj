@@ -1,6 +1,6 @@
 {
-  "name": "web",
-  "version": "0.0.0",
+  "name": "nfj-front",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,19 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "13.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "ui": "*"
+    "axios": "^1.1.3",
+    "framer-motion": "^7.6.4",
+    "mobx": "^6.6.2",
+    "mobx-react-lite": "^3.4.0",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-toastify": "^9.1.0",
+    "styled-components": "^5.3.6",
+    "swr": "^1.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "eslint": "7.32.0",
-    "eslint-config-custom": "*",
-    "tsconfig": "*",
-    "@types/node": "^17.0.12",
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "typescript": "^4.5.3"
+    "@types/node": "18.11.9",
+    "@types/styled-components": "^5.1.26",
+    "eslint": "8.26.0",
+    "eslint-config-next": "12.3.1"
   }
 }
