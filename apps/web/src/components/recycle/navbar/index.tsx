@@ -2,7 +2,7 @@ import * as S from './styles'
 import { Container, Navbar, Nav } from 'react-bootstrap'
 
 import logoImage from 'root/public/icons/logo.svg'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Header(props: any) {
