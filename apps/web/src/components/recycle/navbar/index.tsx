@@ -5,8 +5,6 @@ import logoImage from 'root/public/icons/logo.svg'
 import Image from 'next/future/image'
 import Link from 'next/link'
 
-//
-
 export default function Header(props: any) {
   return (
     <S.Header className="container">
