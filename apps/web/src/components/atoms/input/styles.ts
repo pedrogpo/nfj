@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { ColorThemeType } from '~/core/constants/theme'
 
 const sizeVariants = (size) => {
   return {
@@ -9,19 +8,16 @@ const sizeVariants = (size) => {
       font-weight: ${({ theme }) => theme.typography.weight.medium};
     `,
     l: css`
-      padding: 0.875rem 2.5rem;
+      padding: 0.875rem 1rem;
       font-size: ${({ theme }) => theme.typography.text.m};
-      font-weight: ${({ theme }) => theme.typography.weight.medium};
+      font-weight: ${({ theme }) => theme.typography.weight.regular};
     `,
   }[size]
 }
 
 interface InputProps {
-  color?: ColorThemeType
-  sizeOf?: 'm' | 'l'
-  fill?: 'contained' | 'outlined'
-  hug?: boolean
-  iconPos?: 'left' | 'right'
+  sizeOf: 'm' | 'l'
+  iconPos: 'left' | 'right'
   iconSize?: number
 }
 
@@ -35,19 +31,21 @@ export const Input = styled.input<InputProps>`
   border: 0;
 
   &::placeholder {
-    color: ${({ theme }) => theme.colors.gray_500 };
-    font-weight: ${({ theme }) => theme.typography.weight.medium };;
+    color: ${({ theme }) => theme.colors.gray_500};
+    font-weight: ${({ theme }) => theme.typography.weight.medium};
   }
 
   ${({ sizeOf }) => sizeVariants(sizeOf)}
 
-  ${({iconPos, iconSize}) => iconPos === 'left' && `padding-left: calc(1.5rem + ${iconSize}px);`}
+  ${({ iconPos, sizeOf, iconSize }) =>
+    iconPos === 'left' &&
+    `padding-left: calc(1.5rem + ${
+      iconSize ? `${iconSize}px` : sizeOf === 'm' ? '22px' : '24px'
+    });`}
 
-  ${({ theme, color, fill }) => `
-    background: ${fill === 'contained' ? theme.colors[color] : 'transparent'};
-    border: ${
-      fill === 'outlined' ? `1px solid ${theme.colors[color]}` : 'none'
-    };
+  ${({ theme }) => css`
+    background: ${theme.colors.gray_700};
+    border: 1px solid transparent;
     color: ${theme.colors.gray_100};
   `}
 `
@@ -68,7 +66,16 @@ export const InputIcon = styled.span<InputProps>`
   ${(props) => props.iconPos === 'right' && 'right: 15px; left: initial;'}
 
   svg {
-    ${({iconSize}) => iconSize && `width: ${iconSize}px;`}
-    ${({iconSize}) => iconSize && `height: ${iconSize}px;`}
+    color: ${({ theme }) => theme.colors.gray_500};
+
+    ${({ sizeOf, iconSize }) =>
+      css`
+        width: ${iconSize ? `${iconSize}px` : sizeOf === 'm' ? '22px' : '24px'};
+        height: ${iconSize
+          ? `${iconSize}px`
+          : sizeOf === 'm'
+          ? '22px'
+          : '24px'};
+      `}
   }
 `
