@@ -5,7 +5,7 @@ export const Header = styled.header`
   left: 50%;
   transform: translateX(-50%);
 
-  top:65px;
+  top: 4rem;
 
   @media screen and (max-width: 576px){
     top: 0;
@@ -19,7 +19,7 @@ export const Header = styled.header`
 
   backdrop-filter: blur(25px);
 
-  padding: 25px 38px;
+  padding: 1.5rem 2.25rem;
 
   border-radius: 15px;
 
