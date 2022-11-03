@@ -15,14 +15,14 @@ function Content() {
         through our website, enjoy.
       </Text>
       <div className="d-flex align-items-center gap-4 flex-wrap">
-        <Button color="primary_500" size="l" fill="contained" hug={false}>
+        <Button color="primary_500" size="l" fill="contained">
           Start juicing
         </Button>
         <Text color="gray_500" size="m" weight="medium">
           View our products
         </Text>
       </div>
-      <div className='overlay'/>
+      <div className="overlay" />
     </S.Content>
   )
 }

@@ -13,7 +13,7 @@ export default function Button({
   color = 'primary_500',
   size = 'm',
   fill = 'contained',
-  hug = false,
+  hug = true,
   children,
   ...props
 }: React.PropsWithChildren<ButtonAppProps>) {
