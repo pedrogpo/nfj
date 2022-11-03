@@ -11,6 +11,7 @@ export const Header = styled.header`
     top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    border-top: 0;
   }
 
   z-index: 99999;
