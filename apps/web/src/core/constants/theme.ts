@@ -31,7 +31,7 @@ export const defaultTheme = {
       l: "1.12rem",
       m: "1rem",
       s: "0.88rem",
-      xs: "0.62rem",
+      xs: "0.75rem",
     } as const,
     weight: {
       light: 300,

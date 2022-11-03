@@ -30,7 +30,7 @@ export default function Jumbotron() {
   return (
     <S.Jumbotron>
       <Container>
-        <Row>
+        <Row className="gap-lg-0 gap-5">
           <Col lg="6">
             <Content />
           </Col>

@@ -7,9 +7,11 @@ export const Jumbotron = styled.main`
   display: flex;
   align-items: center;
 
-  padding-top: 122px;
-  padding-bottom: 122px;
+  padding-top: 140px;
 
+  @media screen and (max-width: 992px) and (min-width: 576px){
+    padding-top: 230px;
+  }
 `
 
 export const Content = styled.div`
@@ -31,6 +33,4 @@ export const TextGradient = styled.span`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
-
 `

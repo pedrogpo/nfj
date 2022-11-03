@@ -4,6 +4,8 @@ import { defaultTheme } from '../core/constants/theme'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/global'
 
+// TODO: px to rem
+
 function NFJ({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={defaultTheme}>
