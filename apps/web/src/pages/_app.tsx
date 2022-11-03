@@ -3,14 +3,26 @@ import { AppProps } from 'next/app'
 import { defaultTheme } from '../core/constants/theme'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/global'
+import { ReactElement, ReactNode } from 'react'
+import { NextPage } from 'next'
 
 // TODO: px to rem
 
-function NFJ({ Component, pageProps }: AppProps) {
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode
+}
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout
+}
+
+function NFJ({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page)
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle theme={defaultTheme} />
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps} />)}
     </ThemeProvider>
   )
 }
