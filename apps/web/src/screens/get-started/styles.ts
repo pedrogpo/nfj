@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const GetStartedContainer = styled.main``
+export const GetStartedContainer = styled.main`
+  height: 100%;
+`
 
 export const MethodContainer = styled.div`
   display: flex;

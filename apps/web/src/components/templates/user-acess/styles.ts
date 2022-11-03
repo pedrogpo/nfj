@@ -8,7 +8,6 @@ export const TemplateContainer = styled.div`
   .wrapper {
     height: 100%;
     padding-top: calc(70px + 2rem + 1rem);
-    padding-bottom: calc(70px + 2rem + 1rem);
   }
 `
 export const LogoContainer = styled.header`
