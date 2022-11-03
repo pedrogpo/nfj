@@ -14,7 +14,7 @@ interface InputAppProps extends InputHTMLAttributes<HTMLButtonElement> {
 
 export default function Input ({
   sizeOf = 'm',
-  color = 'primary_500',
+  color = 'gray_700',
   fill = 'contained',
   hug = false,
   iconPos = 'left',
