@@ -15,9 +15,16 @@ export default function Button({
   fill = 'contained',
   hug = false,
   children,
+  ...props
 }: React.PropsWithChildren<ButtonAppProps>) {
   return (
-    <S.ButtonContainer color={color} size={size} fill={fill} hug={hug}>
+    <S.ButtonContainer
+      color={color}
+      size={size}
+      fill={fill}
+      hug={hug}
+      {...props}
+    >
       {children}
     </S.ButtonContainer>
   )
