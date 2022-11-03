@@ -3,14 +3,8 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "app/*": [
+      "~/*": [
         "src/*"
-      ],
-      "root/*": [
-        "./*"
-      ],
-      "components/*": [
-        "src/components/*"
       ]
     },
     "target": "es5",

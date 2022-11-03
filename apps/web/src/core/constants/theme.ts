@@ -21,14 +21,14 @@ export const defaultTheme = {
   } as const,
   typography: {
     title:{
-      xl: "4.38rem",
-      l: "3rem",
+      xl: "3.25rem",
+      l: "2.5rem",
       m: "1.88rem",
-      s: "1.25rem",
+      s: "1.5rem",
     } as const,
     text: {
-      xl: "1.5rem",
-      l: "1.25rem",
+      xl: "1.25rem",
+      l: "1.12rem",
       m: "1rem",
       s: "0.88rem",
       xs: "0.62rem",

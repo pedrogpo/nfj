@@ -4,7 +4,14 @@ export const Header = styled.header`
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
+
   top:65px;
+
+  @media screen and (max-width: 576px){
+    top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 
   z-index: 99999;
 
@@ -22,6 +29,9 @@ export const Header = styled.header`
   .navbar-toggler {
     border-color: transparent;
     box-shadow: none !important;
+    border: 1px solid ${({theme}) => theme.colors.gray_600};
+    padding: 0.5rem;
+    font-size: 1rem;
   }
 
   .nav-link {
@@ -39,7 +49,4 @@ export const Header = styled.header`
   .nav-link.active {
     color: ${({theme}) => theme.colors.gray_100};
   }
-
-  box-shadow: none;
-  transition: box-shadow 0.3s ease;
 `

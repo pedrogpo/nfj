@@ -1,9 +1,3 @@
-import { Title, Navbar } from "components/recycle/"
+import HomeScreen from "~/screens/home"
 
-export default function Home() {
-  return (
-    <Navbar>
-      <Title color="primary_500" size="l" weight="regular">adsasdas</Title>
-    </Navbar>
-  )
-}
+export default HomeScreen

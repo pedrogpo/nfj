@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { ColorThemeType, TitleFontSize, WeightFont } from "../../../core/constants/theme"
+import { ColorThemeType, TitleFontSize, WeightFont } from "~/core/constants/theme"
 
 interface TitleProps{
   size: TitleFontSize,

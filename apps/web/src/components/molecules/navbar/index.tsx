@@ -1,7 +1,7 @@
 import * as S from './styles'
 import { Container, Navbar, Nav } from 'react-bootstrap'
 
-import logoImage from 'root/public/icons/logo.svg'
+import logoImage from 'public/icons/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -19,7 +19,7 @@ export default function Header(props: any) {
           />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="nav-collapse 1" className="justify-content-end">
+        <Navbar.Collapse id="nav-collapse 1" className="justify-content-end mt-md-0 mt-4">
           <Nav>
             <Nav.Link href="#">Home</Nav.Link>
             <Nav.Link href="#about-us"> About us </Nav.Link>
