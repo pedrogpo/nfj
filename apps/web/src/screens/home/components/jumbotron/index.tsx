@@ -3,6 +3,11 @@ import { Title, Text, Button } from '~/components/atoms'
 import { ProductCard } from '~/components/molecules'
 import * as S from './styles'
 
+// images
+import rightOverlay from 'public/overlays/home.svg'
+import Image from 'next/image'
+import { useState } from 'react'
+
 function Content() {
   return (
     <S.Content>
@@ -28,6 +33,8 @@ function Content() {
 }
 
 export default function Jumbotron() {
+  const [activeOverlay, setActiveOverlay] = useState(false)
+
   return (
     <S.Jumbotron>
       <Container>
@@ -36,12 +43,19 @@ export default function Jumbotron() {
             <Content />
           </Col>
           <Col lg="6">
-            <div className="cards">
+            <div
+              className="cards"
+              onMouseEnter={() => setActiveOverlay(true)}
+              onMouseLeave={() => setActiveOverlay(false)}
+            >
               <ProductCard />
               <ProductCard />
             </div>
           </Col>
         </Row>
+        <div className={`right__overlay ${activeOverlay && 'active'}`}>
+          <Image src={rightOverlay} alt="Right overlay" width={1300} />
+        </div>
       </Container>
     </S.Jumbotron>
   )
