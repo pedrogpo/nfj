@@ -26,7 +26,7 @@ const sizeVariants = (size) => {
 export const ButtonContainer = styled.button<ButtonProps>`
   ${({ hug }) =>
     css`
-      width: ${hug ? '100%' : 'fit-content'};
+      width: ${hug ? 'fit-content' : '100%'};
     `}
 
   ${({ theme, color, fill }) => `

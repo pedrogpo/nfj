@@ -13,11 +13,18 @@ export default function Button({
   color = 'primary_500',
   size = 'm',
   fill = 'contained',
-  hug = false,
+  hug = true,
   children,
+  ...props
 }: React.PropsWithChildren<ButtonAppProps>) {
   return (
-    <S.ButtonContainer color={color} size={size} fill={fill} hug={hug}>
+    <S.ButtonContainer
+      color={color}
+      size={size}
+      fill={fill}
+      hug={hug}
+      {...props}
+    >
       {children}
     </S.ButtonContainer>
   )
