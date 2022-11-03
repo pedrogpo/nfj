@@ -10,18 +10,19 @@ function Content() {
         Start consuming <br />
         your favorite <S.TextGradient>Juice</S.TextGradient>
       </Title>
-      <Text className='mb-4' color="gray_500" size="xl" weight="regular">
-        Juices are a collection of virtual items that you can <br /> purchase through
-        our website, enjoy.
+      <Text className="mb-5" color="gray_500" size="xl" weight="regular">
+        Juices are a collection of virtual items that you <br /> can purchase
+        through our website, enjoy.
       </Text>
       <div className="d-flex align-items-center gap-4 flex-wrap">
         <Button color="primary_500" size="l" fill="contained" hug={false}>
           Start juicing
         </Button>
-        <Text color="gray_500" size="l" weight="medium">
+        <Text color="gray_500" size="m" weight="medium">
           View our products
         </Text>
       </div>
+      <div className='overlay'/>
     </S.Content>
   )
 }
@@ -30,19 +31,15 @@ export default function Jumbotron() {
   return (
     <S.Jumbotron>
       <Container>
-        <Row>
+        <Row className="gap-lg-0 gap-5 align-items-center">
           <Col lg="6">
             <Content />
           </Col>
           <Col lg="6">
-            <Row>
-              <Col lg="6">
-                <ProductCard/>
-              </Col>
-              <Col lg="6">
-                <ProductCard/>
-              </Col>
-            </Row>
+            <div className="cards">
+              <ProductCard />
+              <ProductCard />
+            </div>
           </Col>
         </Row>
       </Container>

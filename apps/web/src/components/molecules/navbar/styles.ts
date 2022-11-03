@@ -5,12 +5,13 @@ export const Header = styled.header`
   left: 50%;
   transform: translateX(-50%);
 
-  top:65px;
+  top: 4rem;
 
   @media screen and (max-width: 576px){
     top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    border-top: 0;
   }
 
   z-index: 99999;
@@ -19,7 +20,7 @@ export const Header = styled.header`
 
   backdrop-filter: blur(25px);
 
-  padding: 25px 38px;
+  padding: 1.5rem 2.25rem;
 
   border-radius: 15px;
 
@@ -30,7 +31,7 @@ export const Header = styled.header`
     border-color: transparent;
     box-shadow: none !important;
     border: 1px solid ${({theme}) => theme.colors.gray_600};
-    padding: 0.5rem;
+    padding: 0.5rem .7rem;
     font-size: 1rem;
   }
 
@@ -48,5 +49,24 @@ export const Header = styled.header`
 
   .nav-link.active {
     color: ${({theme}) => theme.colors.gray_100};
+  }
+
+  .icons__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  @media screen and (max-width: 992px){
+    .icons__top{
+      width: 100%;
+    }
+    .search__input{
+      width: 50px;
+      input {
+        padding-right: 5px;
+      }
+    }
   }
 `

@@ -6,7 +6,7 @@ export const defaultTheme = {
     primary_600: "rgba(64, 41, 154, 1)",
     gray_500: "rgba(99, 99, 106, 1)",
     gray_700: "rgba(24, 24, 27, 1)",
-    gray_800: "rgba(19, 19, 22, 1)",
+    gray_800: "rgba(17, 17, 20, 1)",
     gray_900: "rgba(12, 12, 14, 1)",
     gray_100: "rgba(237, 237, 237, 1)",
     gray_200: "rgba(204, 204, 204, 1)",
@@ -21,7 +21,7 @@ export const defaultTheme = {
   } as const,
   typography: {
     title:{
-      xl: "3.25rem",
+      xl: "3.5rem",
       l: "2.5rem",
       m: "1.88rem",
       s: "1.5rem",
@@ -31,7 +31,7 @@ export const defaultTheme = {
       l: "1.12rem",
       m: "1rem",
       s: "0.88rem",
-      xs: "0.62rem",
+      xs: "0.75rem",
     } as const,
     weight: {
       light: 300,
