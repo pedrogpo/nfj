@@ -1,18 +1,17 @@
 import styled from 'styled-components'
 
-export const GetStartedContainer = styled.main`
-  height: 100%;
-`
+export const GetStartedContainer = styled.main.attrs({ className: 'wrapper' })``
 
 export const MethodContainer = styled.div`
   display: flex;
+  width: 100%;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 
   .method__title {
     margin-bottom: 2.5rem;
-
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -21,19 +20,6 @@ export const MethodContainer = styled.div`
 
   .register__buttons {
     margin-bottom: 1.5rem;
-  }
-
-  .social__buttons {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 1.5rem 0;
-    > span {
-      text-align: center;
-    }
   }
 
   a {

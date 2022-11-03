@@ -1,11 +1,11 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { ReactElement } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import { Button, Text, Title } from '~/components/atoms'
+import SocialSignUp from '~/components/molecules/social-sign-up'
 import UserAccessTemplate from '~/components/templates/user-acess'
 import { NextPageWithLayout } from '~/pages/_app'
-import DividerWithText from './components/divider'
+import DividerWithText from '../../components/atoms/divider'
 import * as S from './styles'
 
 const GetStartedScreen: NextPageWithLayout = () => {
@@ -31,18 +31,10 @@ const GetStartedScreen: NextPageWithLayout = () => {
             >
               Register with email
             </Button>
-            <DividerWithText>or</DividerWithText>
-            <div className="social__buttons">
-              <Button fill="outlined" hug={false}>
-                Continue with Google
-              </Button>
-              <Button fill="outlined" hug={false}>
-                Continue with Facebook
-              </Button>
-              <Text size="s" weight="medium" color="gray_100" as="span">
-                Do you already have an account? <Link href="#">Log in</Link>
-              </Text>
-            </div>
+            <SocialSignUp />
+            <Text size="s" weight="medium" color="gray_100" as="span">
+              Do you already have an account? <Link href="#">Log in</Link>
+            </Text>
           </S.MethodContainer>
         </Col>
       </Row>

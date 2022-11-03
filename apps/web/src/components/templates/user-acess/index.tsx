@@ -24,7 +24,7 @@ export default function UserAccessTemplate({
             NFJ
           </Title>
         </S.LogoContainer>
-        <div className="wrapper">{children}</div>
+        {children}
       </Container>
     </S.TemplateContainer>
   )
