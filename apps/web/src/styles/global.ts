@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body{
+  
     ${({ theme }) => `
       background-color: ${theme.colors.background};
     `}
@@ -12,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
   }
 
   a{ 
@@ -25,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     -o-user-select: none;
     user-select: none;
     pointer-events: none;
+   
   }
 `
 
