@@ -17,7 +17,7 @@ const sizeVariants = (size) => {
     `,
     l: css`
       padding: 0.875rem 2.5rem;
-      font-size: ${({ theme }) => theme.typography.title.m};
+      font-size: ${({ theme }) => theme.typography.text.m};
       font-weight: ${({ theme }) => theme.typography.weight.medium};
     `,
   }[size]
