@@ -16,13 +16,13 @@ export default function ProductCard() {
         <div className="dots"><BsThreeDots size={25}/></div>
       </div>
       <S.CardImage>
-        <Image src="/juices/orange.png" alt="" width={150} height={150}/>
+        <Image src="/juices/orange.png" alt="" width={140} height={140}/>
       </S.CardImage>
       <div className='d-flex align-items-end justify-content-between'>
-        <Text color="gray_100" weight='semibold' size='xl'>Grape <br /> Fruit Juice</Text>
+        <Text color="gray_100" weight='semibold' size='m'>Grape <br /> Fruit Juice</Text>
         <div className='text-end'>
           <Text as="span" color="gray_500" weight='medium' size='xs'>Current price</Text>
-          <Text color="gray_200" weight='semibold' size='l'>$24.95</Text>
+          <Text color="gray_200" weight='semibold' size='m'>$24.95</Text>
         </div>
       </div>
     </S.Card>
