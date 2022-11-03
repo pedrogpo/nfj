@@ -1,27 +1,27 @@
 import styled from 'styled-components'
 
-export const GetStartedContainer = styled.main`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-`
+export const GetStartedContainer = styled.main``
 
 export const MethodContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 
-  > h1 {
-    margin-bottom: 2rem;
+  .method__title {
+    margin-bottom: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
   }
 
-  .register-button {
+  .register__buttons {
     margin-bottom: 1.5rem;
   }
 
-  .social-buttons {
+  .social__buttons {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -29,6 +29,9 @@ export const MethodContainer = styled.div`
     flex-direction: column;
     gap: 1rem;
     margin: 1.5rem 0;
+    > span {
+      text-align: center;
+    }
   }
 
   a {

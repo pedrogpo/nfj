@@ -1,56 +1,57 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { ReactElement } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Button, Text, Title } from '~/components/atoms'
+import UserAccessTemplate from '~/components/templates/user-acess'
+import { NextPageWithLayout } from '~/pages/_app'
 import DividerWithText from './components/divider'
 import * as S from './styles'
 
-export default function GetStartedScreen() {
+const GetStartedScreen: NextPageWithLayout = () => {
   return (
     <S.GetStartedContainer>
-      <Container>
-        <Row className="align-items-center justify-content-center">
-          <Col lg="4">
-            <S.MethodContainer>
+      <Row className="align-items-center justify-content-center h-100">
+        <Col md="12" lg="4">
+          <S.MethodContainer>
+            <div className="method__title">
               <Title size="m" weight="medium" color="gray_100">
                 Welcome to the NFJ
               </Title>
-              <Button
-                color="primary_500"
-                size="l"
-                fill="contained"
-                hug={false}
-                className="register-button"
-              >
-                Register with email
+              <Text size="m" weight="medium" color="gray_500">
+                Be part of the big juicy community
+              </Text>
+            </div>
+            <Button
+              color="primary_500"
+              size="l"
+              fill="contained"
+              hug={false}
+              className="register__buttons"
+            >
+              Register with email
+            </Button>
+            <DividerWithText>or</DividerWithText>
+            <div className="social__buttons">
+              <Button fill="outlined" hug={false}>
+                Continue with Google
               </Button>
-              <DividerWithText>or</DividerWithText>
-              <div className="social-buttons">
-                <Button fill="outlined" hug={false}>
-                  Continue with Google
-                </Button>
-                <Button fill="outlined" hug={false}>
-                  Continue with Facebook
-                </Button>
-              </div>
+              <Button fill="outlined" hug={false}>
+                Continue with Facebook
+              </Button>
               <Text size="s" weight="medium" color="gray_100" as="span">
                 Do you already have an account? <Link href="#">Log in</Link>
               </Text>
-            </S.MethodContainer>
-          </Col>
-          <Col lg="5">
-            <S.ImageContainer>
-              <Image src="/images/vault.svg" alt="" height={500} width={500} />
-              <Title size="s" weight="medium" color="gray_100" as="h2">
-                Buy and sell your juices
-              </Title>
-              <Text size="m" weight="regular" color="gray_500">
-                Exchange your juices with the community with safe
-              </Text>
-            </S.ImageContainer>
-          </Col>
-        </Row>
-      </Container>
+            </div>
+          </S.MethodContainer>
+        </Col>
+      </Row>
     </S.GetStartedContainer>
   )
 }
+
+GetStartedScreen.getLayout = (page: ReactElement) => {
+  return <UserAccessTemplate>{page}</UserAccessTemplate>
+}
+
+export default GetStartedScreen
