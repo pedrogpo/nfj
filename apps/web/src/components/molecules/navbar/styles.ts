@@ -30,7 +30,7 @@ export const Header = styled.header`
     border-color: transparent;
     box-shadow: none !important;
     border: 1px solid ${({theme}) => theme.colors.gray_600};
-    padding: 0.5rem;
+    padding: 0.5rem .7rem;
     font-size: 1rem;
   }
 
@@ -48,5 +48,24 @@ export const Header = styled.header`
 
   .nav-link.active {
     color: ${({theme}) => theme.colors.gray_100};
+  }
+
+  .icons__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  @media screen and (max-width: 992px){
+    .icons__top{
+      width: 100%;
+    }
+    .search__input{
+      width: 50px;
+      input {
+        padding-right: 5px;
+      }
+    }
   }
 `

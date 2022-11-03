@@ -1,30 +1,59 @@
 import * as S from './styles'
-import { Container, Navbar, Nav } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 
 import logoImage from 'public/icons/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Button, Input } from '~/components/atoms'
+
+import { BiSearchAlt } from 'react-icons/bi'
 
 export default function Header(props: any) {
   return (
     <S.Header className="container">
       <Navbar bg="transparent" expand="lg" variant="dark">
-        <Link href="/">
-          <Image
-            src={logoImage}
-            alt="Logo NFJ"
-            width={55}
-            quality={100}
-            priority
-          />
-        </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="nav-collapse 1" className="justify-content-end mt-md-0 mt-4">
-          <Nav>
+        <div className="icons__top">
+          <Link href="/">
+            <Image
+              src={logoImage}
+              alt="Logo NFJ"
+              width={55}
+              quality={100}
+              priority
+            />
+          </Link>
+          <div className="d-flex gap-3">
+            <div
+              className="search__input"
+              onClick={(e) => {
+                alert('open modal')
+              }}
+            >
+              <Input
+                color="gray_800"
+                icon={<BiSearchAlt color="white" />}
+                iconSize={22}
+                sizeOf="m"
+                type="text"
+                placeholder="Search for products"
+                onKeyDown={(e) => {
+                  e.preventDefault()
+                }}
+              />
+            </div>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          </div>
+        </div>
+        <Navbar.Collapse
+          id="nav-collapse 1"
+          className="justify-content-end mt-lg-0 mt-4"
+        >
+          <Nav className="gap-3">
             <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#about-us"> About us </Nav.Link>
-            <Nav.Link href="#pricing"> Pricing </Nav.Link>
-            <Nav.Link href="#contact"> Contact </Nav.Link>
+            <Nav.Link href="#about-us">About us</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Button>Get started</Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
