@@ -5,10 +5,14 @@ export const Jumbotron = styled.main`
   min-height: 100vh;
   display: flex;
 
-  padding-top: calc(122px + 65px + 130px);
+  padding-top: calc(7.5rem + 4rem + 130px); // TODO: change this later
 
   @media screen and (max-width: 567px){
-    padding-top: calc(122px + 64px);
+    padding-top: calc(7.5rem + 4rem);
+  }
+  
+  @media screen and (max-width: 992px) and (min-width: 576px){
+    padding-top: calc(7.5rem + 4rem + 3.75rem);
   }
 
   .cards{
@@ -47,11 +51,6 @@ export const Jumbotron = styled.main`
       }
     }
   }
-
-
-  @media screen and (max-width: 992px) and (min-width: 576px){
-    padding-top: calc(122px + 65px + 60px);
-  }
 `
 
 export const Content = styled.div`
@@ -62,7 +61,7 @@ export const Content = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 
   /* overlay */
   .overlay{

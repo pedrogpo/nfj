@@ -16,7 +16,7 @@ export const Card = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 `
 
 export const CardImage = styled.div`
