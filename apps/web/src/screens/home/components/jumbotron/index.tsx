@@ -18,7 +18,7 @@ function Content() {
         <Button color="primary_500" size="l" fill="contained" hug={false}>
           Start juicing
         </Button>
-        <Text color="gray_500" size="l" weight="medium">
+        <Text color="gray_500" size="m" weight="medium">
           View our products
         </Text>
       </div>
@@ -39,7 +39,6 @@ export default function Jumbotron() {
             <div className="cards">
               <ProductCard />
               <ProductCard />
-              <div className='overlay'/>
             </div>
           </Col>
         </Row>

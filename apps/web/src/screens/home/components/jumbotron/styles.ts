@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Jumbotron = styled.main`
-
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -24,33 +23,11 @@ export const Jumbotron = styled.main`
       justify-content: center;
     }
     
-    /* overlay */
-    .overlay{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(88, 55, 221, 0.1) 0%, rgba(88, 55, 221, 0) 100%);
-      transform: translate(20%, -30%);
-      z-index: -1;
-    }
-
-    .overlay::after{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(1, 193, 180, 0.1) 0%, rgba(1, 193, 180, 0) 100%);
-      transform: translate(100%, 100%);
-      z-index: -1;
-    }
     & > div:not(.overlay) {
       box-shadow: -4px 0px 23px 5px rgba(0, 0, 0, 0.4);
       filter: drop-shadow(4px 4px 25px rgba(0, 0, 0, 0.35));
     }
+
     & > div:nth-child(1){
       transform: scale(1.10) perspective(400px) rotateY(-20deg) rotateX(10deg) rotateZ(-3deg);
       left: 90px;
