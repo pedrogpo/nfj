@@ -9,6 +9,7 @@ import * as S from './styles'
 import Link from 'next/link'
 import SocialSignUp from '~/components/molecules/social-sign-up'
 import { BiLock, BiUser } from 'react-icons/bi'
+import { routes } from '~/core/constants/routes'
 
 const LoginScreen: NextPageWithLayout = () => {
   return (
@@ -38,7 +39,7 @@ const LoginScreen: NextPageWithLayout = () => {
                 className="input"
               />
               <Link href="#" className="forgot__password">
-              Forgot your password?
+                Forgot your password?
               </Link>
               <Button
                 color="primary_500"
@@ -58,7 +59,8 @@ const LoginScreen: NextPageWithLayout = () => {
               as="span"
               className="login__account"
             >
-              Don't have an account? <Link href="#">Register</Link>
+              Don't have an account?{' '}
+              <Link href={routes.register}>Register</Link>
             </Text>
           </S.LoginContainer>
         </Col>

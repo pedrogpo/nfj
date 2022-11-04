@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { Button, Input } from '~/components/atoms'
 
 import { BiSearchAlt } from 'react-icons/bi'
+import { routes } from '~/core/constants/routes'
 
 export default function Header(props: any) {
   return (
@@ -53,7 +54,7 @@ export default function Header(props: any) {
             <Nav.Link href="#about-us">About us</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
-            <Link href="get-started">
+            <Link href={routes.getStated}>
               <Button>Get started</Button>
             </Link>
           </Nav>
