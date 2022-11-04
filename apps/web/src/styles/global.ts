@@ -29,6 +29,19 @@ const GlobalStyle = createGlobalStyle`
     pointer-events: none;
    
   }
+
+  ::-webkit-scrollbar {
+      width: 3px;
+      background-color: ${({ theme }) => theme.colors.background};
+  }
+  ::-webkit-scrollbar-thumb {
+      background: ${({ theme }) => theme.colors.gray_600};
+      border-radius: 50px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.0);
+  }
 `
 
 export default GlobalStyle

@@ -39,14 +39,14 @@ export const UserCollector = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  left: 5.5px;
+  left: 2.30px;
 
   ${() => {
     let finalDivs = ""
     for (var i = 1; i < 10; i++){
       finalDivs += `
         &>div:nth-child(${i}){
-          transform: translateX(calc(${i} * -25%));
+          transform: translateX(calc(${i} * -10%));
         }
       `
     }
@@ -68,5 +68,7 @@ export const UserCollectorBox = styled.div`
   color: ${({theme}) => theme.colors.gray_100};
   font-weight: ${({theme}) => theme.typography.weight.medium};
   font-size: ${({theme}) => theme.typography.text.xs};
+
+  outline: 3px solid ${({theme}) => theme.colors.gray_900};
 
 `

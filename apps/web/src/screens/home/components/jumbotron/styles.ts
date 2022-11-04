@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const Jumbotron = styled.main`
+export const Jumbotron = styled.section`
   width: 100%;
-  min-height: 100vh;
   display: flex;
+  overflow: hidden;
+
+  padding-bottom: 16.7rem;
 
   padding-top: calc(7.5rem + 4rem + 130px); // TODO: change this later
 
@@ -15,8 +17,13 @@ export const Jumbotron = styled.main`
     padding-top: calc(7.5rem + 4rem + 3.75rem);
   }
 
+  .container {
+    position: relative;
+  }
+
   .cards{
     position: relative;
+    z-index: 999;
 
     display: flex;
     justify-content: end;
@@ -26,8 +33,29 @@ export const Jumbotron = styled.main`
     @media screen and (max-width: 992px){
       justify-content: center;
     }
+
+    &:hover{
+      & > div:nth-child(1){
+        transform: scale(0.85) perspective(350px) rotateY(10deg) rotateX(10deg) rotateZ(0deg);
+        @media screen and (max-width: 992px){
+          transform: scale(0.55) perspective(350px) rotateY(10deg) rotateX(10deg) rotateZ(0deg);
+          left: calc(140px / 2);
+        }
+        left: 45px;
+      }
+
+      & > div:nth-child(2){
+        transform: scale(1.05) perspective(350px) rotateY(-15deg) rotateX(5deg) rotateZ(0deg);
+
+        @media screen and (max-width: 992px){
+          transform: scale(.55) perspective(350px) rotateY(-15deg) rotateX(5deg) rotateZ(0deg);
+        }
+        bottom: -40px;
+      }
+    }
     
     & > div:not(.overlay) {
+      transition: .6s ease all;
       box-shadow: -4px 0px 23px 5px rgba(0, 0, 0, 0.4);
       filter: drop-shadow(4px 4px 25px rgba(0, 0, 0, 0.35));
     }
@@ -46,9 +74,33 @@ export const Jumbotron = styled.main`
       position: relative;
       bottom: -50px;
       @media screen and (max-width: 992px){
-      transform: scale(0.65) perspective(400px) rotateY(15deg) rotateX(10deg) rotateZ(0deg);
+        transform: scale(0.65) perspective(400px) rotateY(15deg) rotateX(10deg) rotateZ(0deg);
         right: calc(140px / 2);
       }
+    }
+  }
+
+  .right__overlay{
+    position: absolute;
+    right: -140px;
+    top: calc(-7.5rem - 4rem - 130px);
+    width: 70%;
+    height: 100vh;
+    min-height: 100vh;
+    clip-path: polygon(0 0, 0% 0, 0% 0%, 0 0%);
+    transition: .6s ease all;
+
+    img {
+      width: 100%;
+      height: 950px;
+    }
+
+    &.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    @media screen and (max-width: 992px){
+      display: none;
     }
   }
 `
@@ -87,14 +139,4 @@ export const Content = styled.div`
     z-index: -1;
   }
 
-`
-
-export const TextGradient = styled.span`
-
-  ${({theme}) => `
-    background: linear-gradient(97.09deg, ${theme.colors.secondary_500} 0%, ${theme.colors.primary_500} 120%);
-  `}
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 `

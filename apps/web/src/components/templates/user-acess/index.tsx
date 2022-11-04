@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import { Title } from '~/components/atoms'
 import * as S from './styles'
 
