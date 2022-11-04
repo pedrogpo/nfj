@@ -1,13 +1,16 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { ReactElement } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { Button, Text, Title } from '~/components/atoms'
 import SocialSignUp from '~/components/molecules/social-sign-up'
 import UserAccessTemplate from '~/components/templates/user-acess'
+import { routes } from '~/core/constants/routes'
 import { NextPageWithLayout } from '~/pages/_app'
 import * as S from './styles'
 
 const GetStartedScreen: NextPageWithLayout = () => {
+  const router = useRouter()
   return (
     <S.GetStartedContainer>
       <Row className="align-items-center justify-content-center h-100">
@@ -27,12 +30,14 @@ const GetStartedScreen: NextPageWithLayout = () => {
               fill="contained"
               hug={false}
               className="register__buttons"
+              onClick={() => router.push(routes.register)}
             >
               Register with email
             </Button>
             <SocialSignUp />
             <Text size="s" weight="medium" color="gray_100" as="span">
-              Do you already have an account? <Link href="#">Log in</Link>
+              Do you already have an account?{' '}
+              <Link href={routes.login}>Log in</Link>
             </Text>
           </S.MethodContainer>
         </Col>
