@@ -3,7 +3,7 @@ import { BiCake, BiCheck } from 'react-icons/bi'
 import * as S from './styles'
 
 export default function CheckBoxInput() {
-  const [checked, setChecked] = useState(true)
+  const [checked, setChecked] = useState(false)
 
   return (
     <S.CheckBoxContainer>
