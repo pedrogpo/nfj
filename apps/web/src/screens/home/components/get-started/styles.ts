@@ -7,13 +7,17 @@ export const GetStarted = styled.section`
   margin: 2rem 0;
   overflow: hidden;
 
-  padding-bottom: 5rem;
+  margin-bottom: 10rem;
+
+  @media screen and (max-width: 768px){
+    margin-bottom: calc(10rem / 2);
+  }
 
   .container{
     position: relative;
   }
 
-  .head{
+  & .subject{
     margin-bottom: 7rem;
   }
 
