@@ -16,7 +16,7 @@ export const Header = styled.header`
 
   z-index: 99999;
 
-  background: ${({theme}) => theme.colors.gray_900_06} !important;
+  background: ${({theme}) => theme.colors.gray_900_085} !important;
 
   backdrop-filter: blur(25px);
 
