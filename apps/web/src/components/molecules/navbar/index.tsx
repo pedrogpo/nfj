@@ -31,7 +31,7 @@ export default function Header(props: any) {
               }}
             >
               <Input
-                color="gray_800"
+                background="gray_700"
                 icon={<BiSearchAlt color="white" />}
                 sizeOf="m"
                 type="text"
@@ -53,7 +53,9 @@ export default function Header(props: any) {
             <Nav.Link href="#about-us">About us</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
-            <Button>Get started</Button>
+            <Link href="get-started">
+              <Button>Get started</Button>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

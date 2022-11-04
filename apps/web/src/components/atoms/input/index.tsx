@@ -8,6 +8,7 @@ interface InputAppProps extends InputHTMLAttributes<HTMLButtonElement> {
   icon?: JSX.Element
   iconSize?: number
   className?: string
+  background?: ColorThemeType
 }
 
 export default function Input({
@@ -16,6 +17,7 @@ export default function Input({
   icon,
   iconSize,
   className,
+  background = 'gray_800',
   ...props
 }: React.PropsWithChildren<InputAppProps>) {
   return (
@@ -31,6 +33,7 @@ export default function Input({
         </S.InputIcon>
       )}
       <S.Input
+        background={background}
         iconPos={iconPos}
         sizeOf={sizeOf}
         type="text"
