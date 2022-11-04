@@ -7,6 +7,7 @@ interface InputAppProps extends InputHTMLAttributes<HTMLButtonElement> {
   iconPos?: 'left' | 'right'
   icon?: JSX.Element
   iconSize?: number
+  className?: string
 }
 
 export default function Input({
@@ -14,10 +15,11 @@ export default function Input({
   iconPos = 'left',
   icon,
   iconSize,
+  className,
   ...props
 }: React.PropsWithChildren<InputAppProps>) {
   return (
-    <S.InputBox>
+    <S.InputBox className={className}>
       {icon && (
         <S.InputIcon
           sizeOf={sizeOf}

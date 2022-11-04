@@ -22,11 +22,8 @@ interface InputProps {
 }
 
 export const Input = styled.input<InputProps>`
-  transition: 0.3s all ease;
   border-radius: 10px;
-  max-width: 100%;
   width: 100%;
-
   outline: none;
   border: 0;
 
@@ -48,10 +45,20 @@ export const Input = styled.input<InputProps>`
     border: 1px solid transparent;
     color: ${theme.colors.gray_100};
   `}
+
+
+ &:focus {
+    border: 1px solid rgba(120, 93, 228, 0.4);
+  }
+
+  &:disabled {
+    cursor: text;
+  }
 `
 
 export const InputBox = styled.div`
   position: relative;
+  width: 100%;
 `
 
 export const InputIcon = styled.span<InputProps>`
@@ -59,7 +66,6 @@ export const InputIcon = styled.span<InputProps>`
   top: 50%;
   transform: translateY(-50%);
   line-height: 0;
-
   z-index: 1;
 
   left: 15px;
