@@ -1,12 +1,20 @@
+import { ReactElement } from 'react'
 import DefaultLayout from '~/components/templates/default'
+import { NextPageWithLayout } from '~/pages/_app'
 import GetStarted from './components/get-started'
 import Jumbotron from './components/jumbotron'
 
-export default function HomeScreen() {
+const HomeScreen: NextPageWithLayout = () => {
   return (
-    <DefaultLayout>
+    <>
       <Jumbotron />
       <GetStarted />
-    </DefaultLayout>
+    </>
   )
 }
+
+HomeScreen.getLayout = (page: ReactElement) => {
+  return <DefaultLayout>{page}</DefaultLayout>
+}
+
+export default HomeScreen
