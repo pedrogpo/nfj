@@ -22,6 +22,7 @@ export const LoginTitleContainer = styled.div`
   align-items: flex-start;
   text-align: left;
 `
+
 export const LoginFormContainer = styled.form`
   margin-bottom: 1.5rem;
   display: flex;
@@ -35,9 +36,9 @@ export const LoginFormContainer = styled.form`
   .forgot__password {
     margin-top: 0.75rem;
     margin-bottom: 2.5rem;
-    font-size: ${({ theme }) => theme.typography.text.s};
+    font-size: ${({ theme }) => theme.typography.text.xs};
     font-weight: ${({ theme }) => theme.typography.weight.medium};
-    color: ${({ theme }) => theme.colors.gray_100};
+    color: ${({ theme }) => theme.colors.gray_500};
     transition: color 0.2s ease-in-out;
     :hover {
       color: ${({ theme }) => theme.colors.primary_400};

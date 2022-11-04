@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { ColorThemeType } from '~/core/constants/theme'
 
 const sizeVariants = (size) => {
   return {
@@ -9,13 +10,17 @@ const sizeVariants = (size) => {
     `,
     l: css`
       padding: 0.875rem 1rem;
-      font-size: ${({ theme }) => theme.typography.text.m};
+      font-size: ${({ theme }) => theme.typography.text.s};
       font-weight: ${({ theme }) => theme.typography.weight.regular};
     `,
   }[size]
 }
 
-interface InputProps {
+interface InputProps extends InputIconProps {
+  background: ColorThemeType
+}
+
+interface InputIconProps {
   sizeOf: 'm' | 'l'
   iconPos: 'left' | 'right'
   iconSize?: number
@@ -25,7 +30,7 @@ export const Input = styled.input<InputProps>`
   border-radius: 10px;
   width: 100%;
   outline: none;
-  border: 0;
+  border: 1px solid transparent;
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.gray_500};
@@ -40,12 +45,11 @@ export const Input = styled.input<InputProps>`
       iconSize ? `${iconSize}px` : sizeOf === 'm' ? '22px' : '24px'
     });`}
 
-  ${({ theme }) => css`
-    background: ${theme.colors.gray_700};
+  ${({ theme, background }) => css`
+    background: ${theme.colors[background]};
     border: 1px solid transparent;
     color: ${theme.colors.gray_100};
   `}
-
 
  &:focus {
     border: 1px solid rgba(120, 93, 228, 0.4);
@@ -54,6 +58,9 @@ export const Input = styled.input<InputProps>`
   &:disabled {
     cursor: text;
   }
+
+  transition: .3s ease all;
+
 `
 
 export const InputBox = styled.div`
@@ -61,7 +68,7 @@ export const InputBox = styled.div`
   width: 100%;
 `
 
-export const InputIcon = styled.span<InputProps>`
+export const InputIcon = styled.span<InputIconProps>`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

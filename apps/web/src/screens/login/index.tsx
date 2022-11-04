@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { ReactElement } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { Button, Input, Text, Title } from '~/components/atoms'
@@ -26,18 +27,18 @@ const LoginScreen: NextPageWithLayout = () => {
             <S.LoginFormContainer>
               <Input
                 placeholder="Inform your email"
-                sizeOf="l"
+                sizeOf="m"
                 icon={<BiUser />}
                 className="input__email"
               />
               <Input
                 placeholder="Inform your password"
-                sizeOf="l"
+                sizeOf="m"
                 icon={<BiLock />}
                 className="input"
               />
               <Link href="#" className="forgot__password">
-                Forgot your password?
+              Forgot your password?
               </Link>
               <Button
                 color="primary_500"
@@ -57,7 +58,7 @@ const LoginScreen: NextPageWithLayout = () => {
               as="span"
               className="login__account"
             >
-              Do you already have an account? <Link href="#">Log in</Link>
+              Don't have an account? <Link href="#">Register</Link>
             </Text>
           </S.LoginContainer>
         </Col>
