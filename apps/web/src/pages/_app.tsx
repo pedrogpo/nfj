@@ -5,8 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/global'
 import { ReactElement, ReactNode } from 'react'
 import { NextPage } from 'next'
-
-// TODO: px to rem
+import '~/styles/fonts.css'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
