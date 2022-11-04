@@ -16,7 +16,11 @@ export const Jumbotron = styled.section`
   @media screen and (max-width: 992px) and (min-width: 576px){
     padding-top: calc(7.5rem + 4rem + 3.75rem);
   }
-
+  
+  @media screen and (max-width: 992px){
+    padding-bottom: calc(16.7rem / 2);
+  }
+  
   .container {
     position: relative;
   }
