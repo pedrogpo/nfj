@@ -140,13 +140,3 @@ export const Content = styled.div`
   }
 
 `
-
-export const TextGradient = styled.span`
-
-  ${({theme}) => `
-    background: linear-gradient(97.09deg, ${theme.colors.secondary_500} 0%, ${theme.colors.primary_500} 120%);
-  `}
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-`

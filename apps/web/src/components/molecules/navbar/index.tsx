@@ -18,6 +18,7 @@ export default function Header(props: any) {
               src={logoImage}
               alt="Logo NFJ"
               width={55}
+              height={55}
               quality={100}
               priority
             />

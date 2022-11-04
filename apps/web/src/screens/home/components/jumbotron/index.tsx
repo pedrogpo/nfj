@@ -1,5 +1,5 @@
 import { Col, Container, Row } from 'react-bootstrap'
-import { Title, Text, Button } from '~/components/atoms'
+import { Title, Text, Button, TextGradient } from '~/components/atoms'
 import { ProductCard } from '~/components/molecules'
 import * as S from './styles'
 
@@ -13,7 +13,7 @@ function Content() {
     <S.Content>
       <Title color="gray_100" size="xl" weight="bold">
         Start consuming <br />
-        your favorite <S.TextGradient>Juice</S.TextGradient>
+        your favorite <TextGradient>Juice</TextGradient>
       </Title>
       <Text className="mb-5" color="gray_500" size="xl" weight="regular">
         Juices are a collection of virtual items that you <br /> can purchase
@@ -47,6 +47,7 @@ export default function Jumbotron() {
               className="cards"
               onMouseEnter={() => setActiveOverlay(true)}
               onMouseLeave={() => setActiveOverlay(false)}
+              onFocus={(e) => e.preventDefault()}
             >
               <ProductCard />
               <ProductCard />
@@ -54,7 +55,7 @@ export default function Jumbotron() {
           </Col>
         </Row>
         <div className={`right__overlay ${activeOverlay && 'active'}`}>
-          <Image src={rightOverlay} alt="Right overlay" width={1300} />
+          <Image src={rightOverlay} alt="Right overlay" width={1300} height={1435} />
         </div>
       </Container>
     </S.Jumbotron>
