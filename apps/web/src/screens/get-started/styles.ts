@@ -9,15 +9,6 @@ export const MethodContainer = styled.div`
   align-items: center;
   flex-direction: column;
 
-  .method__title {
-    margin-bottom: 2.5rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-
   .register__buttons {
     margin-bottom: 1.5rem;
   }
@@ -27,6 +18,15 @@ export const MethodContainer = styled.div`
     font-weight: ${({ theme }) => theme.typography.weight.bold};
     font-size: ${({ theme }) => theme.typography.text.s};
   }
+`
+
+export const MethodTitleContainer = styled.div`
+  margin-bottom: 2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 `
 
 export const ImageContainer = styled.div`

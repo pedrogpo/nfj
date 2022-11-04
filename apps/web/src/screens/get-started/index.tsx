@@ -5,23 +5,22 @@ import { Button, Text, Title } from '~/components/atoms'
 import SocialSignUp from '~/components/molecules/social-sign-up'
 import UserAccessTemplate from '~/components/templates/user-acess'
 import { NextPageWithLayout } from '~/pages/_app'
-import DividerWithText from '../../components/atoms/divider'
 import * as S from './styles'
 
 const GetStartedScreen: NextPageWithLayout = () => {
   return (
     <S.GetStartedContainer>
       <Row className="align-items-center justify-content-center h-100">
-        <Col md="12" lg="4">
+        <Col md="8" lg="6" xl="4">
           <S.MethodContainer>
-            <div className="method__title">
+            <S.MethodTitleContainer>
               <Title size="m" weight="medium" color="gray_100">
                 Welcome to the NFJ
               </Title>
               <Text size="m" weight="medium" color="gray_500">
                 Be part of the big juicy community
               </Text>
-            </div>
+            </S.MethodTitleContainer>
             <Button
               color="primary_500"
               size="l"
