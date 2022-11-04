@@ -10,7 +10,10 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper'
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
 import { useCallback, useRef } from 'react'
 
-import SwiperCore from "swiper"
+import SwiperCore from 'swiper'
+import Image from 'next/image'
+
+import overlayImg from 'public/overlays/showcase.svg'
 
 export default function Jumbotron() {
   const sliderRef = useRef<SwiperCore>()
@@ -27,9 +30,11 @@ export default function Jumbotron() {
 
   return (
     <S.Showcase>
-      <div>
+      <div style={{position: 'relative'}}>
         <Swiper
-          onInit={(core) => {sliderRef.current = core}}
+          onInit={(core) => {
+            sliderRef.current = core
+          }}
           effect={'coverflow'}
           loop={true}
           grabCursor={true}
@@ -57,18 +62,18 @@ export default function Jumbotron() {
             <ProductCard />
           </SwiperSlide>
         </Swiper>
-      </div>
-      <div
-        className="prev-arrow pagination__left pagination__icon"
-        onClick={handlePrev}
-      >
-        <BiChevronLeft size={30} />
-      </div>
-      <div
-        className="next-arrow pagination__right pagination__icon"
-        onClick={handleNext}
-      >
-        <BiChevronRight size={30} />
+        <div
+          className="prev-arrow pagination__left pagination__icon"
+          onClick={handlePrev}
+        >
+          <BiChevronLeft size={30} />
+        </div>
+        <div
+          className="next-arrow pagination__right pagination__icon"
+          onClick={handleNext}
+        >
+          <BiChevronRight size={30} />
+        </div>
       </div>
     </S.Showcase>
   )

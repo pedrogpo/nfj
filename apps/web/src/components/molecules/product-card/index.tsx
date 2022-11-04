@@ -16,7 +16,7 @@ export default function ProductCard() {
         <div className="dots"><BsThreeDots size={25}/></div>
       </div>
       <S.CardImage>
-        <Image src="/juices/orange.png" alt="" width={140} height={140}/>
+        <Image src="/juices/orange.png" alt="" width={140} height={140} quality={50}/>
       </S.CardImage>
       <div className='d-flex align-items-end justify-content-between'>
         <Text color="gray_100" weight='semibold' size='m'>Grape <br /> Fruit Juice</Text>
