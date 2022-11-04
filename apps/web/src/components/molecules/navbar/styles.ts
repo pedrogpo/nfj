@@ -5,7 +5,7 @@ export const Header = styled.header`
   left: 50%;
   transform: translateX(-50%);
 
-  top: 4rem;
+  top: 3rem;
 
   @media screen and (max-width: 576px){
     top: 0;
@@ -55,7 +55,14 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 2.25rem;
+  }
+
+  .nav-btn{
+    margin-left: 1.25rem;
+    @media screen and (max-width: 992px){
+      margin-left: 0;
+    }
   }
 
   @media screen and (max-width: 992px){

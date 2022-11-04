@@ -107,6 +107,13 @@ export const Jumbotron = styled.section`
       display: none;
     }
   }
+  
+  .partner__text{
+    background: linear-gradient(180deg, #8A8A8A 0%, rgba(138, 138, 138, 0) 118.57%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 `
 
 export const Content = styled.div`

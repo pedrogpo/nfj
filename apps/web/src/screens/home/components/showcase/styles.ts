@@ -22,8 +22,6 @@ export const Showcase = styled.section`
     width: 100%;
   }
   
-  /* overflow: hidden; */
-  
   margin: 0 auto;
 
   margin-bottom: 10rem;

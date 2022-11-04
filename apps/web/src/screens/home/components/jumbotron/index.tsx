@@ -19,7 +19,7 @@ function Content() {
         Juices are a collection of virtual items that you <br /> can purchase
         through our website, enjoy.
       </Text>
-      <div className="d-flex align-items-center gap-4 flex-wrap">
+      <div className="d-flex align-items-center gap-4 flex-wrap mb-4">
         <Button color="primary_500" size="l" fill="contained">
           Start juicing
         </Button>
@@ -27,6 +27,12 @@ function Content() {
           View our products
         </Text>
       </div>
+      <Text color="gray_100" size="xl" weight="semibold">OUR PARTNERS</Text>
+      <div className="d-flex gap-4">
+        <Title className='partner__text' as="span" color="gray_100" size="s" weight="bold">KAPO JUICES</Title>
+        <Title className='partner__text' as="span" color="gray_100" size="s" weight="regular">ICE PACKS</Title>
+      </div>
+      
       <div className="overlay" />
     </S.Content>
   )
@@ -38,7 +44,7 @@ export default function Jumbotron() {
   return (
     <S.Jumbotron>
       <Container>
-        <Row className="gap-lg-0 gap-5 align-items-center">
+        <Row className="gap-lg-0 gap-5">
           <Col lg="6">
             <Content />
           </Col>
