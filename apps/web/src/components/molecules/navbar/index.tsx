@@ -33,7 +33,6 @@ export default function Header(props: any) {
               <Input
                 color="gray_800"
                 icon={<BiSearchAlt color="white" />}
-                iconSize={22}
                 sizeOf="m"
                 type="text"
                 placeholder="Search for products"
