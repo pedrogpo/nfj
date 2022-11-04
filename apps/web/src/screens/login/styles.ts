@@ -13,6 +13,9 @@ export const LoginContainer = styled.div`
   }
   > span {
     text-align: center;
+    a {
+      font-weight: bold;
+    }
   }
 `
 export const LoginTitleContainer = styled.div`
@@ -31,7 +34,7 @@ export const LoginFormContainer = styled.form`
   align-items: flex-end;
 
   .input__email {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
   }
   .forgot__password {
     margin-top: 0.75rem;

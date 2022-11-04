@@ -1,5 +1,11 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
-import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 export default class NFJ extends Document {
   static async getInitialProps(ctx: DocumentContext) {

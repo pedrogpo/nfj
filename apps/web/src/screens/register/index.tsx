@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { ReactElement } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { Button, Input, Text, Title } from '~/components/atoms'
+import { Button, CheckBoxInput, Input, Text, Title } from '~/components/atoms'
 import UserAccessTemplate from '~/components/templates/user-acess'
 import { NextPageWithLayout } from '~/pages/_app'
 
@@ -11,66 +11,70 @@ import SocialSignUp from '~/components/molecules/social-sign-up'
 import { BiLock, BiUser } from 'react-icons/bi'
 import { routes } from '~/core/constants/routes'
 
-const LoginScreen: NextPageWithLayout = () => {
+const RegisterScreen: NextPageWithLayout = () => {
   return (
-    <S.LoginScreenContainer>
+    <S.RegisterScreenContainer>
       <Row className="align-items-center justify-content-center h-100">
         <Col md="8" lg="6" xl="4" className="align-items-center">
-          <S.LoginContainer>
-            <S.LoginTitleContainer>
+          <S.RegisterContainer>
+            <S.RegisterTitleContainer>
               <Title size="m" weight="medium" color="gray_100">
-                Login
+                Register
               </Title>
               <Text size="m" weight="medium" color="gray_500">
-                Continue selling and buying your juices
+                Be part of the biggest juicy community
               </Text>
-            </S.LoginTitleContainer>
-            <S.LoginFormContainer>
+            </S.RegisterTitleContainer>
+            <S.RegisterFormContainer>
               <Input
                 placeholder="Inform your email"
-                sizeOf="m"
+                sizeOf="l"
                 icon={<BiUser />}
-                className="input__email"
+                className="input"
               />
               <Input
                 placeholder="Inform your password"
-                sizeOf="m"
+                sizeOf="l"
                 icon={<BiLock />}
                 className="input"
               />
-              <Link href="#" className="forgot__password">
-                Forgot your password?
-              </Link>
+              <Input
+                placeholder="Confirm your password"
+                sizeOf="l"
+                icon={<BiLock />}
+                className=""
+              />
+              <CheckBoxInput />
               <Button
                 color="primary_500"
                 size="l"
                 fill="contained"
                 hug={false}
-                className="login__button"
+                className="Register__button"
               >
-                Log in
+                Create a personal account
               </Button>
-            </S.LoginFormContainer>
+            </S.RegisterFormContainer>
             <SocialSignUp />
             <Text
               size="s"
               weight="medium"
               color="gray_100"
               as="span"
-              className="login__account"
+              className="Register__account"
             >
-              Don't have an account?{' '}
-              <Link href={routes.register}>Register</Link>
+              Do you already have an account?{' '}
+              <Link href={routes.login}>Log in</Link>
             </Text>
-          </S.LoginContainer>
+          </S.RegisterContainer>
         </Col>
       </Row>
-    </S.LoginScreenContainer>
+    </S.RegisterScreenContainer>
   )
 }
 
-LoginScreen.getLayout = (page: ReactElement) => {
+RegisterScreen.getLayout = (page: ReactElement) => {
   return <UserAccessTemplate>{page}</UserAccessTemplate>
 }
 
-export default LoginScreen
+export default RegisterScreen
