@@ -32,7 +32,7 @@ export default class NFJ extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>{this.props.styles}</Head>
         <body>
           <Main />
           <NextScript />
