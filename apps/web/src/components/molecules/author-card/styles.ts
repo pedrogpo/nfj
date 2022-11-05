@@ -1,21 +1,22 @@
 import styled from 'styled-components'
 
 export const AuthorCardContainer = styled.div`
-  background: #fff;
-  overflow: hidden;
+  max-width: 196px;
   width: 100%;
+  overflow: hidden;
   aspect-ratio: 1;
   height: auto;
-  position: relative;
   border-radius: 16px;
   cursor: pointer;
 
   > .author_card__content {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
+    left: 0px;
+    right: 0px;
     background: rgba(0, 0, 0, 0.7);
-    width: 100%;
     padding: 0.75rem;
+    border-radius: 0 0 16px 16px;
   }
 
   .author__name {
@@ -42,8 +43,9 @@ export const AuthorCardBackground = styled.div<AuthorCardContainerProps>`
   background-repeat: no-repeat;
 
   transition: scale 0.2s ease-in-out;
+
   &:hover {
-    scale: 1.5;
+    scale: 1.2;
   }
   width: 100%;
   height: 100%;
