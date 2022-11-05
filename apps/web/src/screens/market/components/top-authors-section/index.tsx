@@ -13,7 +13,7 @@ import SwiperCore from 'swiper'
 import SwiperControl from '~/components/atoms/swiper-control'
 import { Author } from '~/interfaces/author'
 
-const authors: Author[] = [
+export const authors: Author[] = [
   {
     id: 1,
     name: 'Strawberry Magic',

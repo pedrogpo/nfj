@@ -30,3 +30,8 @@ export const FilterButton = styled.button`
     background: ${({ theme }) => theme.colors.primary_400};
   }
 `
+
+export const DropGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`

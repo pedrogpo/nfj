@@ -1,6 +1,7 @@
 import * as S from './styles'
 import { Col, Row } from 'react-bootstrap'
 import { Text, Title } from '~/components/atoms'
+import DropCard from '~/components/molecules/drop-card'
 
 export default function OurDrops() {
   return (
@@ -24,6 +25,11 @@ export default function OurDrops() {
         <S.FilterButton>Popular</S.FilterButton>
         <S.FilterButton>Fresh</S.FilterButton>
       </S.FilterRow>
+      <S.DropGrid>
+        {Array.from({ length: 6 }).map((_, index) => (
+          <DropCard key={index} />
+        ))}
+      </S.DropGrid>
     </S.OurDropsSection>
   )
 }
