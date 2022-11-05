@@ -22,8 +22,6 @@ export const Showcase = styled.section`
     width: 100%;
   }
   
-  /* overflow: hidden; */
-  
   margin: 0 auto;
 
   margin-bottom: 10rem;
@@ -41,6 +39,7 @@ export const Showcase = styled.section`
         max-width: 100%;
       }
     }
+    user-select: none;
   }
 
   .swiper-pagination-bullets{
@@ -56,6 +55,9 @@ export const Showcase = styled.section`
     background: ${({theme}) => theme.colors.gray_700};
     z-index: 9999;
     cursor: pointer;
+    svg {
+      user-select: none;
+    }
   }
 
   .pagination__left{

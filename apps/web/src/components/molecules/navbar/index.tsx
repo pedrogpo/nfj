@@ -50,16 +50,20 @@ export default function Header(props: any) {
           className="justify-content-end mt-lg-0 mt-4"
         >
           <Nav className="gap-3">
-            <Link passHref href={routes.home} className="nav-link">
+            <Link className="nav-link" href={routes.home}>
               Home
             </Link>
-            <Link passHref href={routes.market} className="nav-link">
+            <Link className="nav-link" href={routes.market}>
               Market
             </Link>
-            <Nav.Link href="#pricing">Community</Nav.Link>
-            <Nav.Link href="#contact">FAQ</Nav.Link>
+            <Link className="nav-link" href="/community">
+              Community
+            </Link>
+            <Link className="nav-link" href="/faq">
+              FAQ
+            </Link>
             <Link href={routes.getStated}>
-              <Button>Get started</Button>
+              <Button className="nav-btn">Get started</Button>
             </Link>
           </Nav>
         </Navbar.Collapse>

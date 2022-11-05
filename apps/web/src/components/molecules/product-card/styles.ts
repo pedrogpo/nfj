@@ -23,7 +23,7 @@ export const CardImage = styled.div`
   background: ${({theme}) => theme.colors.gray_800};
   width: 100%;
   height: auto;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   border-radius: 1rem;
   display: flex;
   align-items: center;
