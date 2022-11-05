@@ -1,4 +1,4 @@
-import { Navbar } from '~/components/molecules'
+import { Navbar, Footer} from '~/components/molecules'
 
 interface DefaultLayoutTemplateProps {
   children: React.ReactNode
@@ -13,7 +13,7 @@ export default function DefaultLayout({
       <main>
         {children}
       </main>
-      {/* Footer */}
+      <Footer/>
     </>
   )
 }
