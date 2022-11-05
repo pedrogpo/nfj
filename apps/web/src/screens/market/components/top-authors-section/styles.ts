@@ -17,4 +17,16 @@ export const TopAuthorsSection = styled.section`
   .section__title {
     margin-bottom: 2.5rem;
   }
+
+  .swiper__controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 2rem;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 190px;
+  }
 `

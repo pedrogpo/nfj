@@ -42,7 +42,6 @@ const RegisterScreen: NextPageWithLayout = () => {
                 placeholder="Confirm your password"
                 sizeOf="l"
                 icon={<BiLock />}
-                className=""
               />
               <CheckBoxInput />
               <Button
