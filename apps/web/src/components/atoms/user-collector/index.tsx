@@ -1,12 +1,18 @@
+import { ColorThemeType } from '~/core/constants/theme'
 import * as S from './styles'
 
-export default function UserCollector() {
+interface UserCollectorProps {
+  outLineColor?: ColorThemeType
+}
+export default function UserCollector({
+  outLineColor = 'gray_900',
+}: UserCollectorProps) {
   return (
     <S.UserCollectorContainer>
-      <S.UserCollectorBox>P</S.UserCollectorBox>
-      <S.UserCollectorBox>P</S.UserCollectorBox>
-      <S.UserCollectorBox>P</S.UserCollectorBox>
-      <S.UserCollectorBox>P</S.UserCollectorBox>
+      <S.UserCollectorBox outLineColor={outLineColor}>P</S.UserCollectorBox>
+      <S.UserCollectorBox outLineColor={outLineColor}>P</S.UserCollectorBox>
+      <S.UserCollectorBox outLineColor={outLineColor}>P</S.UserCollectorBox>
+      <S.UserCollectorBox outLineColor={outLineColor}>P</S.UserCollectorBox>
     </S.UserCollectorContainer>
   )
 }

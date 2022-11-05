@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ColorThemeType } from '~/core/constants/theme'
 
 export const UserCollectorContainer = styled.div`
   display: flex;
@@ -19,7 +20,10 @@ export const UserCollectorContainer = styled.div`
   }}
 `
 
-export const UserCollectorBox = styled.div`
+interface UserCollectorBoxProps {
+  outLineColor: ColorThemeType
+}
+export const UserCollectorBox = styled.div<UserCollectorBoxProps>`
   width: 1.55rem;
   height: 1.55rem;
   border-radius: 50%;
@@ -32,5 +36,5 @@ export const UserCollectorBox = styled.div`
   font-weight: ${({ theme }) => theme.typography.weight.medium};
   font-size: ${({ theme }) => theme.typography.text.xs};
 
-  outline: 3px solid ${({ theme }) => theme.colors.gray_900};
+  outline: 3px solid ${({ theme, outLineColor }) => theme.colors[outLineColor]};
 `

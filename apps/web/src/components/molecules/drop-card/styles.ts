@@ -1,15 +1,42 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+interface DropCardProductProps {
+  background: string
+}
+export const DropCardProduct = styled.div<DropCardProductProps>`
+  ${({ background }) => {
+    return css`
+      background: ${background};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      border-radius: 0px 0px 32px 32px;
+
+      img {
+        max-width: 96px;
+        width: 100%;
+        aspect-ratio: 0.53;
+        height: auto;
+        transition: all 0.2s ease-in-out;
+      }
+    `
+  }}
+  cursor: pointer;
+`
 
 export const DropCardContainer = styled.div`
   max-width: 416px;
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.gray_700};
   border-radius: 16px;
+  &:hover ${DropCardProduct} img {
+    scale: 1.3;
+  }
 `
-
-export const DropCardProduct = styled.div``
 
 export const DropCardInfo = styled.div`
   background-color: ${({ theme }) => theme.colors.gray_700};
