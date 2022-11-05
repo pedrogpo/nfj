@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const TopAuthorsSection = styled.section`
   width: 100%;
-  padding-bottom: 16.7rem;
 
   padding-top: calc(5rem + 4rem + 130px); // TODO: change this later
 
