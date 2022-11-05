@@ -8,6 +8,7 @@ const MarketScreen: NextPageWithLayout = () => {
   return (
     <S.MarketContainer>
       <TopAuthors />
+      <
     </S.MarketContainer>
   )
 }

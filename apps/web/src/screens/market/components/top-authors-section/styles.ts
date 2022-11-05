@@ -30,3 +30,4 @@ export const TopAuthorsSection = styled.section`
     width: 190px;
   }
 `
+export const OurDropsSection = styled.section

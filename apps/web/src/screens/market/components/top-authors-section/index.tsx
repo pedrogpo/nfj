@@ -126,30 +126,6 @@ export default function TopAuthors() {
             <AuthorCard author={author} />
           </SwiperSlide>
         ))}
-        {/* <SwiperSlide>
-          <h1>teste</h1>
-        </SwiperSlide>
-        <SwiperSlide>
-          <h1>teste</h1>
-        </SwiperSlide>
-        <SwiperSlide>
-          <h1>teste</h1>
-        </SwiperSlide>
-        <SwiperSlide>
-          <h1>teste</h1>
-        </SwiperSlide> */}
-        {/* <SwiperSlide>
-          <AuthorCard author={authors[0]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <AuthorCard author={authors[1]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <AuthorCard author={authors[2]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <AuthorCard author={authors[3]} />
-        </SwiperSlide> */}
       </Swiper>
     </S.TopAuthorsSection>
   )
