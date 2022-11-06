@@ -61,7 +61,6 @@ export const Content = styled(Dialog.Content)`
   z-index: 999;
   top: 0%;
   bottom: 0;
-  min-width: 370px;
   width: 100%;
   /* transform: translate(0, 0); */
   // Among other things, prevents text alignment inconsistencies when dialog can't be centered in the viewport evenly.
@@ -74,5 +73,9 @@ export const Content = styled(Dialog.Content)`
   }
   &[data-state='closed'] {
     animation: ${slideOut} 200ms ease-in;
+  }
+
+  @media screen and (max-width: 392px){
+    padding: 1rem 1.5rem;
   }
 `

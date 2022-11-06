@@ -1,12 +1,14 @@
+import * as S from './styles'
 import { Col, Container, Row } from 'react-bootstrap'
+
 import { Title, Text, Button, TextGradient } from '~/components/atoms'
 import { ProductCard } from '~/components/organism'
-import * as S from './styles'
+
+import { useState } from 'react'
 
 // images
 import rightOverlay from 'public/overlays/home.svg'
 import Image from 'next/image'
-import { useState } from 'react'
 
 function Content() {
   return (
