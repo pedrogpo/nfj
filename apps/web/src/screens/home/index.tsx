@@ -1,6 +1,7 @@
 import { ReactElement } from 'react'
 import DefaultLayout from '~/components/templates/default'
 import { NextPageWithLayout } from '~/pages/_app'
+import CTA from './components/cta'
 import GetStarted from './components/get-started'
 import Jumbotron from './components/jumbotron'
 import Showcase from './components/showcase/'
@@ -11,6 +12,7 @@ const HomeScreen: NextPageWithLayout = () => {
       <Jumbotron />
       <GetStarted />
       <Showcase />
+      <CTA />
     </>
   )
 }

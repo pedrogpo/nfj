@@ -20,7 +20,7 @@ function Content() {
         through our website, enjoy.
       </Text>
       <div className="d-flex align-items-center gap-4 flex-wrap mb-4">
-        <Button color="primary_500" size="l" fill="contained">
+        <Button boxShadow={true} color="primary_500" size="l" fill="contained">
           Start juicing
         </Button>
         <Text color="gray_500" size="m" weight="medium">

@@ -5,8 +5,9 @@ import * as S from './styles'
 interface ButtonAppProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: ColorThemeType
   size?: 'm' | 'l'
-  fill?: 'contained' | 'outlined'
+  fill?: 'contained' | 'outlined' | 'white'
   hug?: boolean
+  boxShadow?: boolean
 }
 
 export default function Button({
@@ -14,6 +15,7 @@ export default function Button({
   size = 'm',
   fill = 'contained',
   hug = true,
+  boxShadow = false,
   children,
   ...props
 }: React.PropsWithChildren<ButtonAppProps>) {
@@ -23,6 +25,7 @@ export default function Button({
       size={size}
       fill={fill}
       hug={hug}
+      boxShadow={boxShadow}
       {...props}
     >
       {children}
