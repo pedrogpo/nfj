@@ -1,6 +1,6 @@
 import BottomSheet from '~/components/molecules/bottom-sheet'
 import useMobile from '~/hooks/use-mobile/hook'
-import Modal from '../modal'
+import Modal from '../../molecules/modal'
 
 export default function DropPurchase() {
   const isMobile = useMobile()
