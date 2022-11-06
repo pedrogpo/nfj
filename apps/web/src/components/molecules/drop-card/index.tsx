@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Col } from 'react-bootstrap'
 import { BiExpand } from 'react-icons/bi'
 import { Text } from '~/components/atoms'
 import UserCollector from '~/components/atoms/user-collector'
