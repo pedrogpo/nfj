@@ -50,12 +50,20 @@ export default function Header(props: any) {
           className="justify-content-end mt-lg-0 mt-4"
         >
           <Nav className="gap-3">
-            <Link className='nav-link' href="/">Home</Link>
-            <Link className='nav-link' href="/markey">Market</Link>
-            <Link className='nav-link' href="/community">Community</Link>
-            <Link className='nav-link' href="/faq">FAQ</Link>
+            <Link className="nav-link" href={routes.home}>
+              Home
+            </Link>
+            <Link className="nav-link" href={routes.market}>
+              Market
+            </Link>
+            <Link className="nav-link" href="/community">
+              Community
+            </Link>
+            <Link className="nav-link" href="/faq">
+              FAQ
+            </Link>
             <Link href={routes.getStated}>
-              <Button className='nav-btn'>Get started</Button>
+              <Button className="nav-btn">Get started</Button>
             </Link>
           </Nav>
         </Navbar.Collapse>
