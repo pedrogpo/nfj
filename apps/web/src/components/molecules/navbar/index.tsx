@@ -63,7 +63,7 @@ export default function Header(props: any) {
               FAQ
             </Link>
             <Link href={routes.getStated}>
-              <Button className="nav-btn">Get started</Button>
+              <Button boxShadow={true} className="nav-btn">Get started</Button>
             </Link>
           </Nav>
         </Navbar.Collapse>

@@ -4,8 +4,9 @@ import { ColorThemeType } from '~/core/constants/theme'
 interface ButtonProps {
   color: ColorThemeType
   size: 'm' | 'l'
-  fill: 'contained' | 'outlined'
+  fill: 'contained' | 'outlined' | 'white'
   hug: boolean
+  boxShadow: boolean
 }
 
 const sizeVariants = (size) => {
@@ -24,20 +25,41 @@ const sizeVariants = (size) => {
 }
 
 export const ButtonContainer = styled.button<ButtonProps>`
+  transition: .3s ease all;
+
   ${({ hug }) =>
     css`
       width: ${hug ? 'fit-content' : '100%'};
     `}
 
+  background: transparent;
+
   ${({ theme, color, fill }) => `
-    background: ${fill === 'contained' ? theme.colors[color] : 'transparent'};
+    color: ${theme.colors.gray_100};
+
+    ${fill === 'contained' ? 
+      `background: ${theme.colors.primary_500};` :
+      fill === 'white' ? `
+        background: ${theme.colors.gray_100};
+        color: ${theme.colors.primary_500};
+      ` : ''
+    }
     border: ${
       fill === 'outlined' ? `1px solid ${theme.colors[color]}` : 'none'
     };
-    color: ${theme.colors.gray_100};
   `}
 
   ${({ size }) => sizeVariants(size)}
+
+  ${({ boxShadow }) =>
+    boxShadow &&
+    css`
+      box-shadow: 0px 3px 34px 3px rgba(88, 55, 221, 0.3);
+      &:hover{
+        box-shadow: 0px 0px 34px 30px rgba(88, 55, 221, 0);
+      }
+    `
+  }
 
   border-radius: 5px;
 `

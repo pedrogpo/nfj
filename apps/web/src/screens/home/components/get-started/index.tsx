@@ -18,7 +18,7 @@ export default function GetStarted() {
           <Row className="subject">
             <Col>
               <div>
-                <Title color="gray_100" size="xl" weight="bold">
+                <Title as="h2" color="gray_100" size="xl" weight="bold">
                   Start juicing
                 </Title>
                 <Text color="gray_500" size="xl" weight="medium">
