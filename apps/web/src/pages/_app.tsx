@@ -6,6 +6,7 @@ import GlobalStyle from '../styles/global'
 import { ReactElement, ReactNode } from 'react'
 import { NextPage } from 'next'
 import '~/styles/fonts.css'
+import DeviceSizeContextProvider from '~/context/DeviceSizeContext'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -19,10 +20,12 @@ function NFJ({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalStyle theme={defaultTheme} />
-      {getLayout(<Component {...pageProps} />)}
-    </ThemeProvider>
+    <DeviceSizeContextProvider>
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalStyle theme={defaultTheme} />
+        {getLayout(<Component {...pageProps} />)}
+      </ThemeProvider>
+    </DeviceSizeContextProvider>
   )
 }
 
