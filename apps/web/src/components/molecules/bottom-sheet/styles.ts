@@ -55,8 +55,6 @@ const slideOut = keyframes`
 }
 `
 export const Content = styled(Dialog.Content)`
-  padding: 2.5rem 3rem;
-  background: red;
   position: fixed;
   z-index: 999;
   top: 0%;
@@ -73,9 +71,5 @@ export const Content = styled(Dialog.Content)`
   }
   &[data-state='closed'] {
     animation: ${slideOut} 200ms ease-in;
-  }
-
-  @media screen and (max-width: 392px){
-    padding: 1rem 1.5rem;
   }
 `
