@@ -87,7 +87,6 @@ export const authors: Author[] = [
 ]
 export default function TopAuthors() {
   const sliderRef = useRef<SwiperCore>()
-
   return (
     <S.TopAuthorsSection>
       <Row>
