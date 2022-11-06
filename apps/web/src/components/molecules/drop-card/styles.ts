@@ -36,7 +36,6 @@ export const DropCardProduct = styled.div<DropCardProductProps>`
 `
 
 export const DropCardContainer = styled.div`
-  max-width: 416px;
   width: 100%;
   overflow: hidden;
   display: flex;
