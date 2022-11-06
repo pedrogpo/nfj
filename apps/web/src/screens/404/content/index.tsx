@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { Title, Text, TextGradient, Button } from '~/components/atoms'
 import Link from 'next/link'
 
-// imgs
 import img from 'public/404/img.svg'
 import Image from 'next/image'
 
