@@ -32,8 +32,5 @@ export const FilterButton = styled.button`
 `
 
 export const DropGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(416px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 1.25rem;
+
 `

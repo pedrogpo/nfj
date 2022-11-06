@@ -102,11 +102,13 @@ export default function OurDrops() {
         <S.FilterButton>Popular</S.FilterButton>
         <S.FilterButton>Fresh</S.FilterButton>
       </S.FilterRow>
-      <S.DropGrid>
+      <Row className="g-4">
         {drops.map((drop) => (
-          <DropCard key={drop.id} drop={drop} />
+          <Col lg={4} md={6} key={drop.id} >
+            <DropCard drop={drop} />
+          </Col>
         ))}
-      </S.DropGrid>
+      </Row>
     </S.OurDropsSection>
   )
 }
