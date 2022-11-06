@@ -9,6 +9,16 @@ export const AuthorCardContainer = styled.div`
   border-radius: 16px;
   cursor: pointer;
 
+  img{
+    transition: .3s ease all;
+  }
+  
+  &:hover {
+    img{
+      scale: 1.2;
+    }
+  }
+
   > .author_card__content {
     position: absolute;
     bottom: -1px;
@@ -44,9 +54,6 @@ export const AuthorCardBackground = styled.div<AuthorCardContainerProps>`
 
   transition: scale 0.2s ease-in-out;
 
-  &:hover {
-    scale: 1.2;
-  }
   width: 100%;
   height: 100%;
 `
