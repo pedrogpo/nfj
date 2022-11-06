@@ -5,6 +5,7 @@ import Modal from '../../../molecules/modal'
 import { Button, Input } from '~/components/atoms'
 
 import { BiSearchAlt } from 'react-icons/bi'
+import { Col, Row } from 'react-bootstrap'
 
 export default function SearchBox() {
   const isMobile = useMobile()
@@ -16,7 +17,7 @@ export default function SearchBox() {
           <DropPurchaseContent />
         </BottomSheet>
       ) : (
-        <Modal>
+        <Modal isCenter={true}>
           <DropPurchaseContent />
         </Modal>
       )}
@@ -34,18 +35,51 @@ function SearchProductBox() {
         type="text"
         placeholder="Search for products"
       />
-      <Button
-        fill='contained'
-        size='m'
-      >Search</Button>
+      <Button fill="contained" size="m">
+        Search
+      </Button>
     </S.SearchProductBox>
   )
 }
 
 function DropPurchaseContent() {
   return (
-    <>
-      <SearchProductBox/>
-    </>
+    <Row className="justify-content-center">
+      <Col md={8}>
+        <S.SearchContainer>
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+          <SearchProductBox />
+        </S.SearchContainer>
+      </Col>
+    </Row>
   )
 }
