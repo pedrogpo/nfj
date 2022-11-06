@@ -19,6 +19,11 @@ export default function DropCard({ drop }: DropCardProps) {
           width={300}
           height={300}
         />
+        <S.DropCardNewTag>
+          <Text color="gray_100" weight="bold" size="xs">
+            NEW
+          </Text>
+        </S.DropCardNewTag>
       </S.DropCardProduct>
       <S.DropCardInfo>
         <S.DropCardAuthor>
