@@ -1,7 +1,7 @@
 import * as S from './styles'
 import { Col, Row } from 'react-bootstrap'
 import { Text, Title } from '~/components/atoms'
-import DropCard from '~/components/organism/drop-card'
+import DropCard from '~/components/organism/cards/drop-card'
 import { authors } from '../top-authors-section'
 import { Author } from '~/interfaces/author'
 interface Product {
@@ -104,7 +104,7 @@ export default function OurDrops() {
       </S.FilterRow>
       <Row className="g-4">
         {drops.map((drop) => (
-          <Col lg={4} md={6} key={drop.id} >
+          <Col lg={4} md={6} key={drop.id}>
             <DropCard drop={drop} />
           </Col>
         ))}

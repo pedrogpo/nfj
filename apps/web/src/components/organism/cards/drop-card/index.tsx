@@ -7,7 +7,7 @@ import { priceFormatter } from '~/core/utils/formatters'
 import { Drop } from '~/screens/market/components/our-drops'
 import * as Dialog from '@radix-ui/react-dialog'
 import * as S from './styles'
-import DropPurchase from '../drop-purchase'
+import DropPurchase from '../../overlays/purchase-drop'
 interface DropCardProps {
   drop: Drop
 }

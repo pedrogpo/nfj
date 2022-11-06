@@ -2,7 +2,7 @@ import * as S from './styles'
 import { useRef } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { Text, Title } from '~/components/atoms'
-import AuthorCard from '~/components/organism/author-card'
+import AuthorCard from '~/components/organism/cards/author-card'
 
 import 'swiper/css'
 import 'swiper/css/free-mode'

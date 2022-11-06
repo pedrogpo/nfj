@@ -55,7 +55,6 @@ const slideOut = keyframes`
 }
 `
 export const Content = styled(Dialog.Content)`
-  border-radius: 20px 20px 0px 0px;
   padding: 2.5rem 3rem;
   background: red;
   position: fixed;
