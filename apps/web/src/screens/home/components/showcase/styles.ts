@@ -24,12 +24,6 @@ export const Showcase = styled.section`
   
   margin: 0 auto;
 
-  margin-bottom: 10rem;
-
-  @media screen and (max-width: 768px){
-    margin-bottom: calc(10rem / 2);
-  }
-
   .swiper-slide{
     width: 350px;
     @media screen and (max-width: 350px){

@@ -38,8 +38,6 @@ export const DropCardProduct = styled.div<DropCardProductProps>`
 export const DropCardContainer = styled.div`
   width: 100%;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   background-color: ${({ theme }) => theme.colors.gray_700};
   border-radius: 16px;
   &:hover ${DropCardProduct} img {
