@@ -1,7 +1,7 @@
 import * as S from './styles'
 import { Col, Row } from 'react-bootstrap'
 import { Text, Title } from '~/components/atoms'
-import DropCard from '~/components/molecules/drop-card'
+import DropCard from '~/components/organism/drop-card'
 import { authors } from '../top-authors-section'
 import { Author } from '~/interfaces/author'
 interface Product {
