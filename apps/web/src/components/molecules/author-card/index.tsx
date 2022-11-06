@@ -10,7 +10,7 @@ interface AuthorCardProps {
 export default function AuthorCard({ author }: AuthorCardProps) {
   return (
     <S.AuthorCardContainer>
-      <S.AuthorCardBackground img={author.avatar} />
+      <Image src={author.avatar} alt="teste" width={190} height={190} quality={50} />
       <div className="author_card__content">
         <div className="author__name">
           <Text color="gray_100" weight="bold" size="s">
