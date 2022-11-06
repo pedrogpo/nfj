@@ -1,3 +1,3 @@
-export { default as Navbar } from '../organism/navbar'
-export { default as Footer } from '../organism/footer'
-export { default as ProductCard } from '../organism/cards/product-card'
+export { default as BottomSheet } from './bottom-sheet'
+export { default as Modal } from './modal'
+export { default as SocialSignUp } from './social-sign-up'

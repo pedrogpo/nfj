@@ -1,5 +1,5 @@
 import * as S from './styles'
-import { ProductCard } from '~/components/molecules'
+import { ProductCard } from '~/components/organism'
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'

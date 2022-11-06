@@ -1,4 +1,4 @@
-import { Navbar, Footer} from '~/components/molecules'
+import { Navbar, Footer} from '~/components/organism'
 
 interface DefaultLayoutTemplateProps {
   children: React.ReactNode
