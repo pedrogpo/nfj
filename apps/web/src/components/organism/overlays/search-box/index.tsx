@@ -26,9 +26,9 @@ export default function SearchBox() {
   )
 }
 
-function SearchProductBox() {
+function SearchProductForm() {
   return (
-    <S.SearchProductBox>
+    <S.SearchProductForm>
       <Input
         background="gray_700"
         icon={<BiSearchAlt color="white" />}
@@ -39,7 +39,7 @@ function SearchProductBox() {
       <Button fill="contained" size="m">
         Search
       </Button>
-    </S.SearchProductBox>
+    </S.SearchProductForm>
   )
 }
 
@@ -89,7 +89,7 @@ function DropPurchaseContent() {
     <Row className="justify-content-center">
       <Col>
         <S.SearchContainer>
-          <SearchProductBox />
+          <SearchProductForm />
           <S.SearchResult>
             <Text color='gray_200' size="l" weight='medium'>Results: (3)</Text>
             <div className="overflow__scroll">
