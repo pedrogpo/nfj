@@ -27,20 +27,21 @@ const GlobalStyle = createGlobalStyle`
     -o-user-select: none;
     user-select: none;
     pointer-events: none;
-   
   }
 
   ::-webkit-scrollbar {
-      width: 3px;
-      background-color: ${({ theme }) => theme.colors.background};
+    width: 3px;
+    height: 3px;
+    background-color: ${({ theme }) => theme.colors.background};
   }
+
   ::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.colors.gray_600};
-      border-radius: 50px;
+    background: ${({ theme }) => theme.colors.gray_600};
+    border-radius: 50px;
   }
 
   ::-webkit-scrollbar-track {
-      background: rgba(0, 0, 0, 0.0);
+    background: rgba(0, 0, 0, 0.0);
   }
 `
 
