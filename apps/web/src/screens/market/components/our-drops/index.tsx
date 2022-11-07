@@ -75,7 +75,7 @@ const drops: Drop[] = [
       img: '/juices/pink.png',
       background: '#EDADBC   ',
     },
-    description: 'bla',
+    description: 'ads das awd asd awd aw ads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd awads das awd asd awd aw',
     price: 24.9,
     createdAt: '2021-05-01T00:00:00.000Z',
   },
