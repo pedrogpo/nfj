@@ -3,10 +3,13 @@ import * as Dialog from '@radix-ui/react-dialog'
 import styled from 'styled-components'
 
 interface OverlayProps{
-  isCenter: boolean
+  isCenter: boolean,
+  topGap: string
 }
 
 export const Overlay = styled(Dialog.Overlay)<OverlayProps>`
+  padding-top: ${({topGap}) => topGap};
+
   position: fixed;
   z-index: 1000;
   width: 100vw;
