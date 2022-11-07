@@ -20,7 +20,7 @@ export const SearchContainer = styled.div`
   }
 `
 
-export const SearchProductBox = styled.div`
+export const SearchProductForm = styled.form`
   display: flex;
   gap: 1rem;
 

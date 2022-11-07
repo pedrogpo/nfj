@@ -1,13 +1,12 @@
 import * as S from './styles'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Text, Title } from '~/components/atoms'
+import Card from './card'
 
 import { BiUser } from 'react-icons/bi'
 
 // imgs
-import linesImg from 'public/overlays/progress.svg'
 import overlayImg from 'public/overlays/get-started.svg'
-
 import Image from 'next/image'
 
 export default function GetStarted() {
@@ -29,71 +28,33 @@ export default function GetStarted() {
           </Row>
           <Row className="gy-5">
             <Col md="6" lg="3">
-              <div className="cards">
-                <div className="card__box d-flex gap-3 align-items-center mb-3">
-                  <div className="card__box__icon">
-                    <BiUser size={30} />
-                  </div>
-                  <Image src={linesImg} alt="" width={200} />
-                </div>
-                <Title color="gray_100" size="s" weight="bold">
-                  Join in community
-                </Title>
-                <Text color="gray_500" size="m" weight="medium">
-                  Here is a good community based on people interested on the
-                  Juice NFT
-                </Text>
-              </div>
+              <Card
+                title="Join in community"
+                description="Here is a good community based on people interested on the Juice NFT"
+                icon={<BiUser size={30} />}
+              />
             </Col>
             <Col md="6" lg="3">
-              <div className="cards">
-                <div className="card__box d-flex gap-3 align-items-center mb-3">
-                  <div className="card__box__icon">
-                    <BiUser size={30} />
-                  </div>
-                  <Image src={linesImg} alt="" width={200} />
-                </div>
-                <Title color="gray_100" size="s" weight="bold">
-                  Join in community
-                </Title>
-                <Text color="gray_500" size="m" weight="medium">
-                  Here is a good community based on people interested on the
-                  Juice NFT
-                </Text>
-              </div>
+              <Card
+                title="Join in community"
+                description="Here is a good community based on people interested on the Juice NFT"
+                icon={<BiUser size={30} />}
+              />
             </Col>
             <Col md="6" lg="3">
-              <div className="cards">
-                <div className="card__box d-flex gap-3 align-items-center mb-3">
-                  <div className="card__box__icon">
-                    <BiUser size={30} />
-                  </div>
-                  <Image src={linesImg} alt="" width={200} />
-                </div>
-                <Title color="gray_100" size="s" weight="bold">
-                  Join in community
-                </Title>
-                <Text color="gray_500" size="m" weight="medium">
-                  Here is a good community based on people interested on the
-                  Juice NFT
-                </Text>
-              </div>
+              <Card
+                title="Join in community"
+                description="Here is a good community based on people interested on the Juice NFT"
+                icon={<BiUser size={30} />}
+              />
             </Col>
             <Col md="6" lg="3">
-              <div className="cards">
-                <div className="card__box d-flex mb-3">
-                  <div className="card__box__icon">
-                    <BiUser size={30} />
-                  </div>
-                </div>
-                <Title color="gray_100" size="s" weight="bold">
-                  Join in community
-                </Title>
-                <Text color="gray_500" size="m" weight="medium">
-                  Here is a good community based on people interested on the
-                  Juice NFT
-                </Text>
-              </div>
+              <Card
+                title="Join in community"
+                description="Here is a good community based on people interested on the Juice NFT"
+                icon={<BiUser size={30} />}
+                hasLines={false}
+              />
             </Col>
           </Row>
           <div className="overlay">
