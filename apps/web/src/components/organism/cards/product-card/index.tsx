@@ -2,13 +2,13 @@ import * as S from './styles'
 import { BsThreeDots } from 'react-icons/bs'
 import Image from 'next/image'
 import { Text } from '~/components/atoms'
-import UserCollector from '~/components/atoms/user-collector'
+import { UserCollectorRow } from '~/components/molecules'
 
 export default function ProductCard() {
   return (
     <S.Card>
       <div className="head d-flex justify-content-between">
-        <UserCollector />
+        <UserCollectorRow />
         <div className="dots">
           <BsThreeDots size={25} />
         </div>
