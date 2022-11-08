@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { ColorThemeType } from '~/core/constants/theme'
 
 export const UserCollectorContainer = styled.div`
   display: flex;

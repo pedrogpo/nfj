@@ -21,5 +21,7 @@ export const UserCollectorBox = styled.div<UserCollectorBoxProps>`
   font-weight: ${({ theme }) => theme.typography.weight.medium};
   font-size: ${({ theme }) => theme.typography.text.xs};
 
-  outline: 3px solid ${({ theme, outLineColor }) => theme.colors[outLineColor]};
+  outline: 3px solid
+    ${({ theme, outLineColor }) =>
+      outLineColor ? theme.colors[outLineColor] : 'transparent'};
 `

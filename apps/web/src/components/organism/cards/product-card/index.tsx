@@ -8,7 +8,7 @@ export default function ProductCard() {
   return (
     <S.Card>
       <div className="head d-flex justify-content-between">
-        <UserCollectorRow />
+        <UserCollectorRow outLineColor="gray_900" />
         <div className="dots">
           <BsThreeDots size={25} />
         </div>

@@ -60,12 +60,7 @@ export const Content = styled(Dialog.Content)`
   top: 0%;
   bottom: 0;
   width: 100%;
-  /* transform: translate(0, 0); */
-  // Among other things, prevents text alignment inconsistencies when dialog can't be centered in the viewport evenly.
-  // Affects animated and non-animated dialogs alike.
-  // '&:focus': {
-  //   outline: 'none',
-  // },
+
   &[data-state='open'] {
     animation: ${slideIn} 200ms ease-in;
   }
