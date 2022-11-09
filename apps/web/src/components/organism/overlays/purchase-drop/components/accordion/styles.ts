@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
-import { BiChevronDown } from 'react-icons/bi'
+import { BiChevronUp } from 'react-icons/bi'
 const slideDown = keyframes`
     0% {
         height: 0px;
@@ -34,7 +34,7 @@ export const StyledHeader = styled(AccordionPrimitive.Header)`
   all: unset;
   display: flex;
 `
-export const StyledChevron = styled(BiChevronDown)`
+export const StyledChevron = styled(BiChevronUp)`
   transition: transform 300ms cubic-bezier(0.87, 0, 0.13, 1);
   width: 1.25rem;
   aspect-ratio: 1;

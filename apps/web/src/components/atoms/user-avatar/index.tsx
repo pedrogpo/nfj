@@ -9,7 +9,7 @@ interface UserCollectorProps {
   size?: string
 }
 export default function UserAvatar({
-  outLineColor = 'gray_900',
+  outLineColor,
   name = 'P',
   avatar,
   size = '1.55rem',

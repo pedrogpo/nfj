@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Col, Row } from 'react-bootstrap'
 import { BiShare, BiShareAlt, BiShow, BiX } from 'react-icons/bi'
 import { Button, Text, Title, UserAvatar } from '~/components/atoms'
 import AuthorTile from '~/components/molecules/author-tile'
@@ -34,63 +35,67 @@ export default function DropPurchase({ drop }: DropsPurchaseProps) {
 
 function DropPurchaseContent({ drop }: DropsPurchaseProps) {
   return (
-    <S.PurchaseDropContainer background={drop.product.background}>
-      <S.CloseButton>
-        <BiX size={24} />
-      </S.CloseButton>
-      <S.PurchaseCardProduct>
-        <Image
-          alt={drop.name}
-          src={drop.product.img}
-          width={300}
-          height={300}
-        />
-      </S.PurchaseCardProduct>
-      <S.PurchaseCardInfo>
-        <S.DropNewTag>
-          <Text color="gray_100" weight="bold" size="xs">
-            NEW
-          </Text>
-        </S.DropNewTag>
-        <S.PurchaseHeader>
-          <S.PurchaseHeaderCardInfo>
-            <AuthorTile author={drop.author} />
-            <Title color="gray_100" weight="semibold" size="m">
-              {drop.name}
-            </Title>
-          </S.PurchaseHeaderCardInfo>
-          <BiShareAlt />
-        </S.PurchaseHeader>
-        <Text color="gray_500" weight="regular" size="s">
-          {drop.description ? drop.description : 'No description'}
-        </Text>
-        <S.PurchaseDropViews>
-          <BiShow />
-          <Text color="gray_500" weight="regular" size="xs">
-            20 view
-          </Text>
-        </S.PurchaseDropViews>
-        <PriceHistorySection />
-        <LastPurchaseSection />
-      </S.PurchaseCardInfo>
-      <S.PurchaseFooter>
-        <S.PurchaseFooterPrice>
-          <Text color="gray_500" weight="medium" size="s">
-            Current price
-          </Text>
-          <div className="purchase__footer__price">
-            <Text color="gray_100" weight="medium" size="m">
-              {priceFormatter.format(drop.price)}
-            </Text>
+    <S.StyledRow className="justify-content-center h-100">
+      <Col xs={12} md={7}>
+        <S.PurchaseDropContainer background={drop.product.background}>
+          <S.CloseButton>
+            <BiX size={24} />
+          </S.CloseButton>
+          <S.PurchaseCardProduct>
+            <S.DropNewTag>
+              <Text color="gray_100" weight="bold" size="xs">
+                NEW
+              </Text>
+            </S.DropNewTag>
+            <Image
+              alt={drop.name}
+              src={drop.product.img}
+              width={300}
+              height={300}
+            />
+          </S.PurchaseCardProduct>
+          <S.PurchaseCardInfo>
+            <S.PurchaseHeader>
+              <S.PurchaseHeaderCardInfo>
+                <AuthorTile author={drop.author} />
+                <Title color="gray_100" weight="semibold" size="m">
+                  {drop.name}
+                </Title>
+              </S.PurchaseHeaderCardInfo>
+              <BiShareAlt />
+            </S.PurchaseHeader>
             <Text color="gray_500" weight="regular" size="s">
-              0.187 ETH
+              {drop.description ? drop.description : 'No description'}
             </Text>
-          </div>
-        </S.PurchaseFooterPrice>
-        <Button color="primary_500" size="l">
-          Purchase Now
-        </Button>
-      </S.PurchaseFooter>
-    </S.PurchaseDropContainer>
+            <S.PurchaseDropViews>
+              <BiShow />
+              <Text color="gray_500" weight="regular" size="xs">
+                20 view
+              </Text>
+            </S.PurchaseDropViews>
+            <PriceHistorySection />
+            <LastPurchaseSection />
+          </S.PurchaseCardInfo>
+          <S.PurchaseFooter>
+            <S.PurchaseFooterPrice>
+              <Text color="gray_500" weight="medium" size="s">
+                Current price
+              </Text>
+              <div className="purchase__footer__price">
+                <Text color="gray_100" weight="medium" size="m">
+                  {priceFormatter.format(drop.price)}
+                </Text>
+                <Text color="gray_500" weight="regular" size="s">
+                  0.187 ETH
+                </Text>
+              </div>
+            </S.PurchaseFooterPrice>
+            <Button color="primary_500" size="l">
+              Purchase Now
+            </Button>
+          </S.PurchaseFooter>
+        </S.PurchaseDropContainer>
+      </Col>
+    </S.StyledRow>
   )
 }

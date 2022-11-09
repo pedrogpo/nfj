@@ -1,9 +1,10 @@
 import * as Dialog from '@radix-ui/react-dialog'
+import { RefAttributes } from 'react'
 
 import styled from 'styled-components'
 
-interface OverlayProps{
-  isCenter: boolean
+interface OverlayProps extends RefAttributes<HTMLDivElement> {
+  $isCenter: boolean
 }
 
 export const Overlay = styled(Dialog.Overlay)<OverlayProps>`
@@ -14,7 +15,7 @@ export const Overlay = styled(Dialog.Overlay)<OverlayProps>`
   background: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: center;
-  align-items: ${({isCenter}) => isCenter ? 'center' : 'flex-start'}
+  align-items: ${({ $isCenter }) => ($isCenter ? 'center' : 'flex-start')};
 `
 
 export const Content = styled(Dialog.Content)`
