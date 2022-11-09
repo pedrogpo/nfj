@@ -2,12 +2,13 @@ import Image from 'next/image'
 import { Col } from 'react-bootstrap'
 import { BiExpand } from 'react-icons/bi'
 import { Text } from '~/components/atoms'
-import UserCollector from '~/components/atoms/user-collector'
 import { priceFormatter } from '~/core/utils/formatters'
 import { Drop } from '~/screens/market/components/our-drops'
 import * as Dialog from '@radix-ui/react-dialog'
 import * as S from './styles'
 import DropPurchase from '../../overlays/purchase-drop'
+import AuthorTile from '~/components/molecules/author-tile'
+import { UserCollectorRow } from '~/components/molecules'
 interface DropCardProps {
   drop: Drop
 }
@@ -31,20 +32,7 @@ export default function DropCard({ drop }: DropCardProps) {
             </S.DropCardNewTag>
           </S.DropCardProduct>
           <S.DropCardInfo>
-            <S.DropCardAuthor>
-              <S.DropCardAuthorAvatar img={drop.author.avatar} />
-              <Text color="gray_400" weight="regular" size="s">
-                {author.name}
-              </Text>
-              {author.isVerified && (
-                <Image
-                  src="/icons/verified.svg"
-                  alt="user verified"
-                  width={12}
-                  height={12}
-                />
-              )}
-            </S.DropCardAuthor>
+            <AuthorTile author={drop.author} />
             <S.DropCardProductInfo>
               <Text color="gray_100" weight="semibold" size="xl">
                 {drop.name}
@@ -60,7 +48,7 @@ export default function DropCard({ drop }: DropCardProps) {
             </S.DropCardProductDescription>
             <S.DropCardProductSupporters>
               <div>
-                <UserCollector outLineColor="gray_700" />
+                <UserCollectorRow outLineColor="gray_700" />
                 <Text color="gray_500" weight="regular" size="xs">
                   and 6 others that purchased
                 </Text>
@@ -70,7 +58,7 @@ export default function DropCard({ drop }: DropCardProps) {
           </S.DropCardInfo>
         </S.DropCardContainer>
       </Dialog.Trigger>
-      <DropPurchase />
+      <DropPurchase drop={drop} />
     </Dialog.Root>
   )
 }
