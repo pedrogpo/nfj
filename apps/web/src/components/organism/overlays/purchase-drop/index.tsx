@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Col, Row } from 'react-bootstrap'
-import { BiShare, BiShareAlt, BiShow, BiX } from 'react-icons/bi'
+import { BiHeart, BiShare, BiShareAlt, BiShow, BiX } from 'react-icons/bi'
 import { Button, Text, Title, UserAvatar } from '~/components/atoms'
 import AuthorTile from '~/components/molecules/author-tile'
 import BottomSheet from '~/components/molecules/bottom-sheet'
@@ -62,7 +62,10 @@ function DropPurchaseContent({ drop }: DropsPurchaseProps) {
                   {drop.name}
                 </Title>
               </S.PurchaseHeaderCardInfo>
-              <BiShareAlt />
+              <div>
+                <BiHeart />
+                <BiShareAlt />
+              </div>
             </S.PurchaseHeader>
             <Text color="gray_500" weight="regular" size="s">
               {drop.description ? drop.description : 'No description'}

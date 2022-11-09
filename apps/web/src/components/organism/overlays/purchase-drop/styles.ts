@@ -26,10 +26,7 @@ export const PurchaseDropContainer = styled.div<DropCardProductProps>`
         justify-content: flex-start;
         border-radius: 0px;
       }
-      @media (min-width: ${theme.screens.s}) {
-        max-height: 80vh;
-      }
-
+      overflow: hidden;
       position: relative;
       background: ${background};
       display: flex;
@@ -43,13 +40,20 @@ export const PurchaseDropContainer = styled.div<DropCardProductProps>`
 `
 
 export const PurchaseCardProduct = styled.div`
+  ${({ theme }) => {
+    return css`
+      @media (max-width: ${theme.screens.s}) {
+        height: 30vh;
+      }
+    `
+  }}
   position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   margin-top: 3rem;
   padding-bottom: 2rem;
-  height: 30vh;
+  height: 20vh;
 
   img {
     max-height: 230px;
@@ -63,10 +67,12 @@ export const PurchaseCardProduct = styled.div`
 export const PurchaseCardInfo = styled.div`
   ${({ theme }) => {
     return css`
-      @media (min-width: ${theme.screens.s}) {
-        max-height: 40vh;
-        overflow-y: scroll;
+      @media (max-width: ${theme.screens.s}) {
+        overflow-y: visible;
+        max-height: max-content;
       }
+      max-height: 70vh;
+      overflow-y: scroll;
       border-radius: 32px 32px 0 0;
       height: 100%;
       padding: 2rem 1.5rem;
@@ -85,11 +91,15 @@ export const PurchaseHeader = styled.header`
   width: 100%;
   margin-bottom: 0.5rem;
 
-  > svg {
-    cursor: pointer;
-    color: ${({ theme }) => theme.colors.gray_500};
-    width: 1.25rem;
-    height: 1.25rem;
+  div:last-child {
+    display: flex;
+    gap: 0.5rem;
+    svg {
+      cursor: pointer;
+      color: ${({ theme }) => theme.colors.gray_500};
+      width: 1.25rem;
+      height: 1.25rem;
+    }
   }
 `
 
