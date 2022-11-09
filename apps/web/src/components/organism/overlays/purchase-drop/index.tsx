@@ -7,7 +7,8 @@ import { priceFormatter } from '~/core/utils/formatters'
 import useMobile from '~/hooks/use-mobile/hook'
 import { Drop } from '~/screens/market/components/our-drops'
 import Modal from '../../../molecules/modal'
-import { LastPurchaseSection } from './components/last-purchases-section'
+import LastPurchaseSection from './components/last-purchases-section'
+import PriceHistorySection from './components/price-history-section'
 import * as S from './styles'
 
 interface DropsPurchaseProps {
@@ -23,7 +24,7 @@ export default function DropPurchase({ drop }: DropsPurchaseProps) {
           <DropPurchaseContent drop={drop} />
         </BottomSheet>
       ) : (
-        <Modal>
+        <Modal isCenter>
           <DropPurchaseContent drop={drop} />
         </Modal>
       )}
@@ -69,6 +70,7 @@ function DropPurchaseContent({ drop }: DropsPurchaseProps) {
             20 view
           </Text>
         </S.PurchaseDropViews>
+        <PriceHistorySection />
         <LastPurchaseSection />
       </S.PurchaseCardInfo>
       <S.PurchaseFooter>
