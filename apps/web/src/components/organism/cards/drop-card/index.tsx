@@ -42,7 +42,7 @@ export default function DropCard({ drop }: DropCardProps) {
               </Text>
             </S.DropCardProductInfo>
             <S.DropCardProductDescription>
-              <Text color="gray_500" weight="regular" size="s">
+              <Text className='text-truncate' color="gray_500" weight="regular" size="s">
                 {drop.description}
               </Text>
             </S.DropCardProductDescription>

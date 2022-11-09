@@ -49,7 +49,7 @@ export const Showcase = styled.section`
     color: white;
     border-radius: 50%;
     background: ${({theme}) => theme.colors.gray_700};
-    z-index: 9999;
+    z-index: 1;
     cursor: pointer;
     svg {
       user-select: none;

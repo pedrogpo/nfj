@@ -3,11 +3,14 @@ import { RefAttributes } from 'react'
 
 import styled from 'styled-components'
 
-interface OverlayProps extends RefAttributes<HTMLDivElement> {
+interface OverlayProps {
   $isCenter: boolean
+  $topGap: string
 }
 
 export const Overlay = styled(Dialog.Overlay)<OverlayProps>`
+  padding-top: ${({ $topGap }) => $topGap};
+
   position: fixed;
   z-index: 1000;
   width: 100vw;
