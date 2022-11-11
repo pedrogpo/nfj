@@ -11,6 +11,8 @@ import SocialSignUp from '~/components/molecules/social-sign-up'
 import { BiLock, BiUser } from 'react-icons/bi'
 import { routes } from '~/core/constants/routes'
 
+import { signIn } from 'next-auth/react'
+
 const LoginScreen: NextPageWithLayout = () => {
   return (
     <S.LoginScreenContainer>
@@ -45,8 +47,12 @@ const LoginScreen: NextPageWithLayout = () => {
                 color="primary_500"
                 size="l"
                 fill="contained"
+                type="button"
                 hug={false}
                 className="login__button"
+                onClick={() => {
+                  signIn('google')
+                }}
               >
                 Log in
               </Button>
