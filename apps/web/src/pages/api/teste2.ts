@@ -14,8 +14,6 @@ export default async function teste(req: NextApiRequest, res: NextApiResponse) {
       try {
         const result = await axios.get('https://api.github.com/users/pedrogpo')
 
-        res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate')
-
         return res.status(200).json(result)
       } catch (error) {
         return res.status(500).json({ error })
