@@ -4,7 +4,7 @@ import useMobile from '~/hooks/use-mobile/hook'
 import Modal from '../../../molecules/modal'
 import { Button, Input, Text } from '~/components/atoms'
 
-import { BiSearchAlt } from 'react-icons/bi'
+import { BiSearchAlt, BiX } from 'react-icons/bi'
 import { Col, Row } from 'react-bootstrap'
 import Image from 'next/image'
 
@@ -15,6 +15,9 @@ export default function SearchBox() {
     <>
       {isMobile ? (
         <BottomSheet>
+          <S.CloseButton>
+            <BiX size={24} />
+          </S.CloseButton>
           <DropPurchaseContent />
         </BottomSheet>
       ) : (
