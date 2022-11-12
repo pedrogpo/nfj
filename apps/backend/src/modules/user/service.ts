@@ -2,7 +2,7 @@ import { PrismaClient, User } from '@prisma/client'
 import { inject, injectable, Lifecycle, scoped } from 'tsyringe'
 import { ICreateUser, IUser } from './models/user'
 
-import bcrypt from 'bcrypt'
+import { hash } from 'bcrypt'
 
 @injectable()
 @scoped(Lifecycle.ContainerScoped)
@@ -42,7 +42,7 @@ export class UserService {
     }
 
     // Hash password
-    const hashedPassword = await bcrypt.hash(password, 10)
+    const hashedPassword = await hash(password, 10)
 
     const user = await this.prisma.user.create({
       data: {

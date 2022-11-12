@@ -2,40 +2,24 @@ import express, { NextFunction, Request, Response } from 'express'
 import 'express-async-errors'
 import { userRoutes } from './routes/user.routes'
 import Youch from 'youch'
+import { authenticationRoutes } from './routes/authentication.routes'
+import { handleErrors } from './middleware/handleErrors'
+import { ensureAuthentication } from './middleware/ensureAuthentication'
 
 const app = express()
 
 app.use(express.json())
 
 app.use(userRoutes)
+app.use(authenticationRoutes)
+
+app.use(ensureAuthentication)
 
 app.get('/', (req, res) => {
-  throw new Error('There is an error!')
+  const { client_id } = req
+  return res.send(`Hello ${client_id}`)
 })
 
-app.use(
-  async (
-    err: any,
-    request: Request,
-    response: Response,
-    next: NextFunction
-  ) => {
-    if (process.env.NODE_ENV === 'development') {
-      const errors = await new Youch(err, request).toJSON()
-      return response.status(500).json(errors)
-    }
-
-    if (err instanceof Error) {
-      return response.status(400).json({
-        message: err.message,
-      })
-    }
-
-    return response.status(500).json({
-      status: 'error',
-      message: 'Internal Server Error',
-    })
-  }
-)
+app.use(handleErrors)
 
 export { app }
