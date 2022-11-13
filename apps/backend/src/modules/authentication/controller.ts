@@ -27,10 +27,12 @@ export default class AuthenticationController {
     return res.status(201).json(user)
   }
   async getToken(req: Request, res: Response) {
-    const { email, password } = req.body
-    const session = await this.authenticationService.login({
+    const { email, name, avatar, provider } = req.body
+    const session = await this.authenticationService.getToken({
       email,
-      password,
+      name,
+      avatar,
+      provider,
     })
     return res.status(200).json(session)
   }

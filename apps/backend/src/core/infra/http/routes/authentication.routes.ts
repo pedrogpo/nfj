@@ -12,4 +12,8 @@ routes.post('/login', (req, res) => authenticationController.login(req, res))
 routes.post('/register', validateMiddleware(RegisterUserSchema), (req, res) =>
   authenticationController.register(req, res)
 )
+
+routes.post('/getToken', (req, res) =>
+  authenticationController.getToken(req, res)
+)
 export { routes as authenticationRoutes }
