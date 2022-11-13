@@ -1,57 +1,58 @@
-import { PrismaClient, User } from '@prisma/client'
-import { inject, injectable, Lifecycle, scoped } from 'tsyringe'
+import { PrismaClient } from '@prisma/client'
+import { container, inject, injectable, Lifecycle, scoped } from 'tsyringe'
 import { ICreateUser, IUser } from './models/user'
 
 import { hash } from 'bcrypt'
+import { JWTService } from '~/core/services/jwt'
 
 @injectable()
 @scoped(Lifecycle.ContainerScoped)
 export class UserService {
   constructor(@inject('PrismaClient') private readonly prisma: PrismaClient) {}
 
-  async getAll(): Promise<User[]> {
+  async getAll(): Promise<IUser[]> {
     try {
-      const users = await this.prisma.user.findMany()
-
+      const users: IUser[] = await this.prisma.user.findMany({
+        select: {
+          id: true,
+          name: true,
+          email: true,
+        },
+      })
       return users
     } catch (error) {
       throw error
     }
   }
 
-  async create({
-    name,
-    password,
-    email,
-    confirmPassword,
-  }: ICreateUser): Promise<IUser> {
-    const userExists = await this.prisma.user.findFirst({
+  async updateUserAvatar(id: number, avatar: string) {
+    const user = await this.prisma.user.findFirst({
       where: {
-        email: {
-          equals: email,
+        id: {
+          equals: id,
         },
       },
     })
 
-    if (userExists) {
-      throw new Error('User already exists')
+    if (!user) {
+      throw new Error('User does not exists')
     }
 
-    if (password !== confirmPassword) {
-      throw new Error('Password does not match')
-    }
-
-    // Hash password
-    const hashedPassword = await hash(password, 10)
-
-    const user = await this.prisma.user.create({
+    const updatedUser = await this.prisma.user.update({
+      where: {
+        id: id,
+      },
       data: {
-        name,
-        email,
-        password: hashedPassword,
+        avatar,
+      },
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        avatar: true,
       },
     })
 
-    return user
+    return updatedUser
   }
 }
