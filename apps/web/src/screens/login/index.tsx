@@ -17,11 +17,9 @@ const LoginScreen: NextPageWithLayout = () => {
   async function handleLoginButton() {
     const result = await signIn('login', {
       redirect: false,
-      email: 'pedro@nfj.com',
+      email: 'leookamoto1@gmail.com',
       password: '1234',
     })
-
-    console.log({ result })
   }
   return (
     <S.LoginScreenContainer>

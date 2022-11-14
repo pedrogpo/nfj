@@ -47,22 +47,23 @@ export const authOptions: NextAuthOptions = {
             avatar: '',
           }
         } catch (err) {
-          console.log(err.response.data)
           throw err
         }
       },
     }),
   ],
   callbacks: {
-    async signIn({ user, account, profile }) {
+    async signIn({ user, account }) {
       try {
-        const { data: session } = await api.post<IUser>('/getToken', {
-          email: user.email,
-          name: user.name,
-          avatar: user.avatar,
-          provider: account.provider,
-        })
-        user.accessToken = session.accessToken
+        if (account.provider !== 'login') {
+          const { data: session } = await api.post<IUser>('/getToken', {
+            email: user.email,
+            name: user.name,
+            avatar: user.avatar,
+            provider: account.provider,
+          })
+          user.accessToken = session.accessToken
+        }
 
         return true
       } catch (err) {

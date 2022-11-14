@@ -24,7 +24,9 @@ export class AuthenticationService {
     }
 
     if (user.provider != 'server') {
-      throw new Error(`Use your ${user.provider} account to login`)
+      throw new Error(
+        `Seems that you insert details that are not correct. If you registered yourself through a social network, please use the same social network to log in`
+      )
     }
 
     const passwordMatch = await compare(password, user.password!)
@@ -101,7 +103,10 @@ export class AuthenticationService {
     })
     if (userExists) {
       if (userExists.provider !== provider) {
-        throw new Error(`Use your ${provider} account to login`)
+        throw new Error(
+          `Seems that you insert details that are not correct.
+           If you registered yourself through a social network, please use the same social network to log in`
+        )
       }
 
       const jwtService = container.resolve(JWTService)
