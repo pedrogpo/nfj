@@ -7,11 +7,10 @@ export async function handleErrors(
   response: Response,
   next: NextFunction
 ) {
-  console.log('aqui fdp')
-  if (process.env.NODE_ENV === 'development') {
-    const errors = await new Youch(err, request).toJSON()
-    return response.status(500).json(errors)
-  }
+  // if (process.env.NODE_ENV === 'development') {
+  //   const errors = await new Youch(err, request).toJSON()
+  //   return response.status(500).json(errors)
+  // }
 
   if (err instanceof Error) {
     return response.status(400).json({

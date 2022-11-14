@@ -14,6 +14,13 @@ import { routes } from '~/core/constants/routes'
 import { signIn } from 'next-auth/react'
 
 const LoginScreen: NextPageWithLayout = () => {
+  async function handleLoginButton() {
+    const result = await signIn('login', {
+      redirect: false,
+      email: 'leookamoto1@gmail.com',
+      password: '1234',
+    })
+  }
   return (
     <S.LoginScreenContainer>
       <Row className="align-items-center justify-content-center h-100">
@@ -51,7 +58,7 @@ const LoginScreen: NextPageWithLayout = () => {
                 hug={false}
                 className="login__button"
                 onClick={() => {
-                  signIn('google')
+                  handleLoginButton()
                 }}
               >
                 Log in

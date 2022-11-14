@@ -5,19 +5,19 @@ import { UserService } from './service'
 export default class UserController {
   private readonly userService = container.resolve(UserService)
 
-  async create(req: Request, res: Response) {
-    const { name, email, password, confirmPassword } = req.body
-    const user = await this.userService.create({
-      name,
-      email,
-      password,
-      confirmPassword,
-    })
-    return res.status(201).json(user)
-  }
-
   async getAll(req: Request, res: Response) {
     const users = await this.userService.getAll()
+
+    return res.json(users)
+  }
+
+  async updateUserAvatar(req: Request, res: Response) {
+    const { client_id } = req
+    const { avatar } = req.body
+    const users = await this.userService.updateUserAvatar(
+      Number(client_id),
+      avatar
+    )
 
     return res.json(users)
   }

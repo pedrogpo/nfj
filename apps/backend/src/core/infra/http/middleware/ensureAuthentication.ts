@@ -1,5 +1,7 @@
 import { verify } from 'jsonwebtoken'
 import { NextFunction, Request, Response } from 'express'
+import { JWTService } from '~/core/services/jwt'
+import { container } from 'tsyringe'
 
 export async function ensureAuthentication(
   req: Request,
@@ -15,7 +17,9 @@ export async function ensureAuthentication(
   const [, token] = authHeader.split(' ')
 
   try {
-    const { sub: user_id } = verify(token, process.env.SECRET_AUTH!) as IPayload
+    const jwtService = container.resolve(JWTService)
+
+    const { sub: user_id } = jwtService.verify(token) as IPayload
 
     req.client_id = user_id
 
