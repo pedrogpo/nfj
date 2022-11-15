@@ -4,7 +4,7 @@ import { ColorThemeType } from '~/core/constants/theme'
 const sizeVariants = (size) => {
   return {
     m: css`
-      padding: 0.75rem 2rem;
+      padding: 0.75rem 1rem;
       font-size: ${({ theme }) => theme.typography.text.s};
       font-weight: ${({ theme }) => theme.typography.weight.medium};
     `,

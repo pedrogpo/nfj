@@ -35,6 +35,7 @@ export default function Input({
       <S.Input
         background={background}
         iconPos={iconPos}
+        iconSize={iconSize}
         sizeOf={sizeOf}
         type="text"
         className=""
