@@ -25,7 +25,7 @@ const sizeVariants = (size) => {
 }
 
 export const ButtonContainer = styled.button<ButtonProps>`
-  transition: .3s ease all;
+  transition: 0.3s ease all;
 
   ${({ hug }) =>
     css`
@@ -37,12 +37,15 @@ export const ButtonContainer = styled.button<ButtonProps>`
   ${({ theme, color, fill }) => `
     color: ${theme.colors.gray_100};
 
-    ${fill === 'contained' ? 
-      `background: ${theme.colors.primary_500};` :
-      fill === 'white' ? `
+    ${
+      fill === 'contained'
+        ? `background: ${theme.colors.primary_500};`
+        : fill === 'white'
+        ? `
         background: ${theme.colors.gray_100};
         color: ${theme.colors.primary_500};
-      ` : ''
+      `
+        : ''
     }
     border: ${
       fill === 'outlined' ? `1px solid ${theme.colors[color]}` : 'none'
@@ -55,11 +58,13 @@ export const ButtonContainer = styled.button<ButtonProps>`
     boxShadow &&
     css`
       box-shadow: 0px 3px 34px 3px rgba(88, 55, 221, 0.3);
-      &:hover{
+      &:hover {
         box-shadow: 0px 0px 34px 30px rgba(88, 55, 221, 0);
       }
-    `
-  }
+    `}
 
+  &:disabled {
+    opacity: 0.4;
+  }
   border-radius: 5px;
 `

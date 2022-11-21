@@ -16,6 +16,13 @@ const sizeVariants = (size) => {
   }[size]
 }
 
+export const InputContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
+
 interface InputProps extends InputIconProps {
   background: ColorThemeType
 }
@@ -59,8 +66,7 @@ export const Input = styled.input<InputProps>`
     cursor: text;
   }
 
-  transition: .3s ease all;
-
+  transition: 0.3s ease all;
 `
 
 export const InputBox = styled.div`
@@ -91,4 +97,9 @@ export const InputIcon = styled.span<InputIconProps>`
           : '24px'};
       `}
   }
+`
+export const InputError = styled.span`
+  margin-top: 0.5rem;
+  color: ${({ theme }) => theme.colors.danger};
+  font-size: 0.75rem;
 `

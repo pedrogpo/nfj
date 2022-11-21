@@ -1,9 +1,10 @@
 import DefaultLayout from '~/components/templates/default'
 import * as S from './styles'
-import { ReactElement } from 'react'
+import { ReactElement, useEffect } from 'react'
 import { NextPageWithLayout } from '~/pages/_app'
 import TopAuthors from './components/top-authors-section'
 import OurDrops from './components/our-drops'
+import { useNetwork } from '~/hooks/use-network/hook'
 
 const MarketScreen: NextPageWithLayout = () => {
   return (
