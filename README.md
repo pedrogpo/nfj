@@ -2,6 +2,8 @@
 
 Purchase some juices :)
 
+- [Figma Project](https://www.figma.com/file/ChphO2t7JUXKoVlLspFSTo/NFJ)
+
 ### Build
 
 To build all apps and packages, run the following command:
