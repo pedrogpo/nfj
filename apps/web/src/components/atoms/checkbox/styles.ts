@@ -20,8 +20,8 @@ export const CheckBoxRoot = styled(Checkbox.Root)`
   all: unset;
   background: transparent;
   border: 2px solid ${({ theme }) => theme.colors.gray_500};
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@ export const CheckBoxRoot = styled(Checkbox.Root)`
 export const CheckBoxIndicator = styled(Checkbox.Indicator)`
   color: ${({ theme }) => theme.colors.gray_100};
   svg {
-    width: 1rem;
-    height: 1rem;
+    width: 0.75rem;
+    height: 0.75rem;
   }
 `

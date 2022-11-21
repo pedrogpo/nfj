@@ -1,15 +1,14 @@
-/* eslint-disable react/no-unescaped-entities */
 import { ReactElement } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { Button, CheckBoxInput, Input, Text, Title } from '~/components/atoms'
+import { Text, Title } from '~/components/atoms'
 import UserAccessTemplate from '~/components/templates/user-acess'
 import { NextPageWithLayout } from '~/pages/_app'
 
 import * as S from './styles'
 import Link from 'next/link'
 import SocialSignUp from '~/components/molecules/social-sign-up'
-import { BiLock, BiUser } from 'react-icons/bi'
 import { routes } from '~/core/constants/routes'
+import RegisterForm from './register-form'
 
 const RegisterScreen: NextPageWithLayout = () => {
   return (
@@ -25,35 +24,7 @@ const RegisterScreen: NextPageWithLayout = () => {
                 Be part of the biggest juicy community
               </Text>
             </S.RegisterTitleContainer>
-            <S.RegisterFormContainer>
-              <Input
-                placeholder="Inform your email"
-                sizeOf="l"
-                icon={<BiUser />}
-                className="input"
-              />
-              <Input
-                placeholder="Inform your password"
-                sizeOf="l"
-                icon={<BiLock />}
-                className="input"
-              />
-              <Input
-                placeholder="Confirm your password"
-                sizeOf="l"
-                icon={<BiLock />}
-              />
-              <CheckBoxInput />
-              <Button
-                color="primary_500"
-                size="l"
-                fill="contained"
-                hug={false}
-                className="Register__button"
-              >
-                Create a personal account
-              </Button>
-            </S.RegisterFormContainer>
+            <RegisterForm />
             <SocialSignUp />
             <Text
               size="s"

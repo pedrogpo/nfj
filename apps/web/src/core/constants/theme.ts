@@ -22,6 +22,7 @@ export const defaultTheme = {
     secondary_500: 'rgba(0, 255, 178, 1)',
     secondary_700: 'rgba(0, 154, 108, 1)',
     secondary_600: 'rgba(56, 222, 172, 1)',
+    danger: 'rgba(233, 81, 81, 1)',
   } as const,
   typography: {
     title: {

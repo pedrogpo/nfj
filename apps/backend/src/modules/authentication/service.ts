@@ -101,11 +101,11 @@ export class AuthenticationService {
         },
       },
     })
+
     if (userExists) {
       if (userExists.provider !== provider) {
         throw new Error(
-          `Seems that you insert details that are not correct.
-           If you registered yourself through a social network, please use the same social network to log in`
+          `Seems that you insert details that are not correct. If you registered yourself through a social network, please use the same social network to log in`
         )
       }
 
