@@ -17,9 +17,10 @@ export default function ProductCard() {
         <Image
           src="/juices/orange.png"
           alt=""
-          width={140}
-          height={140}
+          width={128}
+          height={128}
           quality={50}
+          loading="lazy"
         />
       </S.CardImage>
       <div className="d-flex align-items-end justify-content-between">
