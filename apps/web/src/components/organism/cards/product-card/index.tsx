@@ -20,7 +20,7 @@ export default function ProductCard() {
           width={128}
           height={128}
           quality={50}
-          loading="lazy"
+          loading="eager"
         />
       </S.CardImage>
       <div className="d-flex align-items-end justify-content-between">
