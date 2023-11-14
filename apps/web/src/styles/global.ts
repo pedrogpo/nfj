@@ -2,11 +2,9 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body{
-  
     ${({ theme }) => `
       background-color: ${theme.colors.background};
     `}
-    font-family: 'Poppins', sans-serif;
   }
 
   *{
@@ -14,6 +12,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+
+    font-family: 'Poppins', sans-serif;
   }
 
   a{ 
